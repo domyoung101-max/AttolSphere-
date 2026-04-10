@@ -1,11 +1,226 @@
 {
-  "ref": "PRED-NNN-X",
-  "status": "[current five-state outcome or PENDING/WATCH/ELEVATED]",
-  "edition_origin": "[edition number]",
-  "flag_text": "[exact prediction text]",
-  "window": "[closing condition or date]",
-  "outcome": "[null or outcome description]",
-  "status_history": [
-    {"edition": "[NNN]", "status": "[status at that edition]"}
+  "version": "v1.2.0",
+  "last_updated": "Edition 014 Morning Sweep 10 April 2026",
+  "predictions": [
+    {
+      "ref": "PRED-001-A",
+      "status": "PENDING",
+      "edition_origin": "001",
+      "flag_text": "Futures volume anomaly: pre-war window insider knowledge pattern. BETS OFF Act, Trump Jr./Polymarket conflict, federal prosecutors involved.",
+      "window": "Section 122 CIT proceedings ongoing",
+      "outcome": null,
+      "status_history": [
+        {"edition": "001", "status": "PENDING"}
+      ]
+    },
+    {
+      "ref": "PRED-002-A",
+      "status": "CONFIRMED",
+      "edition_origin": "002",
+      "flag_text": "Russia/China veto UNSC Hormuz resolution.",
+      "window": "Closed",
+      "outcome": "CONFIRMED — Edition 009. Russia/China blocked vote.",
+      "status_history": [
+        {"edition": "002", "status": "PENDING"},
+        {"edition": "009", "status": "CONFIRMED"}
+      ]
+    },
+    {
+      "ref": "PRED-002-B",
+      "status": "WATCH",
+      "edition_origin": "002",
+      "flag_text": "Iran-Oman Hormuz protocol subsumed into ceasefire coordination language.",
+      "window": "Monitor Islamabad",
+      "outcome": null,
+      "status_history": [
+        {"edition": "002", "status": "PENDING"},
+        {"edition": "014", "status": "WATCH"}
+      ]
+    },
+    {
+      "ref": "PRED-003-A",
+      "status": "ELEVATED",
+      "edition_origin": "003",
+      "flag_text": "Araghchi confirmed 10-point plan as negotiation basis. Islamabad window open.",
+      "window": "Islamabad 10 April",
+      "outcome": null,
+      "status_history": [
+        {"edition": "003", "status": "PENDING"},
+        {"edition": "013", "status": "ELEVATED"},
+        {"edition": "014", "status": "ELEVATED"}
+      ]
+    },
+    {
+      "ref": "PRED-004-A",
+      "status": "CONFIRMED",
+      "edition_origin": "004",
+      "flag_text": "WSO Colonel recovered alive.",
+      "window": "Closed",
+      "outcome": "CONFIRMED — 05 April. SEAL Team Six, CIA deception, 2 MC-130Js destroyed.",
+      "status_history": [
+        {"edition": "004", "status": "PENDING"},
+        {"edition": "007", "status": "CONFIRMED"}
+      ]
+    },
+    {
+      "ref": "PRED-005-A",
+      "status": "PENDING",
+      "edition_origin": "005",
+      "flag_text": "Section 122 CIT oral arguments.",
+      "window": "No decision date confirmed",
+      "outcome": null,
+      "status_history": [
+        {"edition": "005", "status": "PENDING"}
+      ]
+    },
+    {
+      "ref": "PRED-006-A",
+      "status": "WATCH",
+      "edition_origin": "006",
+      "flag_text": "GCC emergency meeting within 48h of UNSC veto. Monitor post-ceasefire positioning.",
+      "window": "Post-ceasefire",
+      "outcome": null,
+      "status_history": [
+        {"edition": "006", "status": "PENDING"},
+        {"edition": "013", "status": "WATCH"},
+        {"edition": "014", "status": "WATCH"}
+      ]
+    },
+    {
+      "ref": "PRED-008-A",
+      "status": "CONFIRMED",
+      "edition_origin": "008",
+      "flag_text": "Sixth deadline mechanism confirmed: Tuesday 8pm ET.",
+      "window": "Closed",
+      "outcome": "CONFIRMED — Edition 010.",
+      "status_history": [
+        {"edition": "008", "status": "PENDING"},
+        {"edition": "010", "status": "CONFIRMED"}
+      ]
+    },
+    {
+      "ref": "PRED-008-B",
+      "status": "DE-ESCALATING",
+      "edition_origin": "008",
+      "flag_text": "Houthi BAM threat not activated. Ceasefire suspends trigger condition.",
+      "window": "Monitor",
+      "outcome": null,
+      "status_history": [
+        {"edition": "008", "status": "PENDING"},
+        {"edition": "013", "status": "DE-ESCALATING"},
+        {"edition": "014", "status": "DE-ESCALATING"}
+      ]
+    },
+    {
+      "ref": "PRED-008-C",
+      "status": "RESOLVED",
+      "edition_origin": "008",
+      "flag_text": "SAR constraint moot. WSO recovered.",
+      "window": "Closed",
+      "outcome": "RESOLVED",
+      "status_history": [
+        {"edition": "008", "status": "PENDING"},
+        {"edition": "008", "status": "RESOLVED"}
+      ]
+    },
+    {
+      "ref": "PRED-008-D",
+      "status": "WATCH",
+      "edition_origin": "008",
+      "flag_text": "India oil waiver expires 19 April. No US sanctions response yet.",
+      "window": "19 April 2026",
+      "outcome": null,
+      "status_history": [
+        {"edition": "008", "status": "PENDING"},
+        {"edition": "013", "status": "WATCH"},
+        {"edition": "014", "status": "WATCH"}
+      ]
+    },
+    {
+      "ref": "PRED-009-E",
+      "status": "RESOLVED",
+      "edition_origin": "009",
+      "flag_text": "OPEC+ no reversal. 206,000 b/d increase proceeded.",
+      "window": "Closed",
+      "outcome": "CONTRADICTED. PMM: Hypothesis B confirmed — analysis underweighted producer bloc cohesion. System change: producer bloc solidarity treated as prior in OPEC+ cases.",
+      "status_history": [
+        {"edition": "009", "status": "PENDING"},
+        {"edition": "009", "status": "RESOLVED"}
+      ]
+    },
+    {
+      "ref": "PRED-010-A",
+      "status": "CONFIRMED",
+      "edition_origin": "010",
+      "flag_text": "No power plant strikes before ceasefire.",
+      "window": "Closed",
+      "outcome": "CONFIRMED — Hypothesis A confirmed.",
+      "status_history": [
+        {"edition": "010", "status": "PENDING"},
+        {"edition": "013", "status": "CONFIRMED"}
+      ]
+    },
+    {
+      "ref": "PRED-012-A",
+      "status": "PARTIAL",
+      "edition_origin": "012",
+      "flag_text": "Trump/Vance public statement on enrichment by 10 April 18:00 BST.",
+      "window": "Closed",
+      "outcome": "PARTIAL — Trump stated no enrichment of uranium 8 April (Tier 1). Formal enrichment framework for talks not confirmed. C3 satisfied, C2 partially satisfied.",
+      "status_history": [
+        {"edition": "012", "status": "PENDING"},
+        {"edition": "013", "status": "PENDING"},
+        {"edition": "014", "status": "PARTIAL"}
+      ]
+    },
+    {
+      "ref": "PRED-012-B",
+      "status": "CONTRADICTED",
+      "edition_origin": "012",
+      "flag_text": "Hezbollah formal ceasefire statement by 09 April 18:00 BST.",
+      "window": "Closed",
+      "outcome": "CONTRADICTED — Window expired 09 April 17:00 GMT. No formal statement issued. Hezbollah subsequently resumed rocket fire into northern Israel 09-10 April. PMM triggered — see SYSTEM_CHANGE_LOG.md Entry 001.",
+      "status_history": [
+        {"edition": "012", "status": "PENDING"},
+        {"edition": "013", "status": "PENDING"},
+        {"edition": "014", "status": "CONTRADICTED"}
+      ]
+    },
+    {
+      "ref": "PRED-013-A",
+      "status": "PARTIAL",
+      "edition_origin": "013",
+      "flag_text": "Iran's delegation at Islamabad will formally table written 10-point plan explicitly including uranium enrichment rights, causing US to issue public red line statement before talks conclude 10 April.",
+      "window": "Closed",
+      "outcome": "PARTIAL — Iran did not formally table a written 10-point plan. Instead Ghalibaf issued public preconditions before talks. Enrichment contradiction surfaced as dominant pre-talk dispute (C3 satisfied). Written plan not tabled at session (C2 partially satisfied). No formal US red-line statement issued in those exact terms. PMM not triggered.",
+      "status_history": [
+        {"edition": "013", "status": "PENDING"},
+        {"edition": "014", "status": "PARTIAL"}
+      ]
+    },
+    {
+      "ref": "PRED-013-B",
+      "status": "PARTIAL",
+      "edition_origin": "013",
+      "flag_text": "Hezbollah will issue formal statement by 09 April 17:00 GMT stating it will not observe ceasefire unless Israel halts Lebanon strikes.",
+      "window": "Closed",
+      "outcome": "PARTIAL — Hezbollah unnamed official confirmed non-adherence to AP. Spirit of prediction met. Letter not met — source was unnamed, no formal Al Manar or Al Mayadeen statement issued. Hezbollah subsequently fired rockets into northern Israel. C2 partially satisfied. PMM not triggered.",
+      "status_history": [
+        {"edition": "013", "status": "PENDING"},
+        {"edition": "014", "status": "PARTIAL"}
+      ]
+    },
+    {
+      "ref": "PRED-014-A",
+      "status": "PENDING",
+      "edition_origin": "014",
+      "flag_text": "The Islamabad talks will produce a ceasefire extension of at least 7 days beyond 22 April as the sole confirmed output of the first session — without a binding framework on Hormuz, enrichment, or Lebanon scope.",
+      "window": "Islamabad session — 10 April 2026",
+      "outcome": null,
+      "status_history": [
+        {"edition": "014", "status": "PENDING"}
+      ]
+    }
   ]
 }
+
