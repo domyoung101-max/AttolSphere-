@@ -1,0 +1,187 @@
+{
+  "version": "v1.0.0",
+  "last_updated": "Edition 015 Evening Sweep 10 April 2026",
+  "description": "Named source registry for AtollSphere 18-feed sweep. Used for automated tier classification and incentive baseline assignment.",
+  "sources": [
+    {
+      "id": "T1-001",
+      "name": "Trump Truth Social / White House official statements",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["truthsocial.com", "whitehouse.gov"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "Domestic victory framing consistent across statements. Gate 0.2 mandatory on all Tier 1 claims.",
+      "active": true
+    },
+    {
+      "id": "T1-002",
+      "name": "CENTCOM public affairs",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["centcom.mil"],
+      "incentive_baseline": "MEDIUM",
+      "incentive_note": "Operational claims serve force protection and strategic signalling. Casualty figures independently verifiable.",
+      "active": true
+    },
+    {
+      "id": "T1-003",
+      "name": "IDF official statements",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["idf.il", "x.com/IDF"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "Strike claims and casualty figures serve domestic and international legitimacy. Gate 0.2 mandatory.",
+      "active": true
+    },
+    {
+      "id": "T1-004",
+      "name": "Iran SNSC / IRNA (named attribution)",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["irna.ir", "x.com/Araghchi"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "Victory framing and maximalist demand signalling serve domestic hardliner audience. Competing primary always required per Gate 0.2.",
+      "active": true
+    },
+    {
+      "id": "T1-005",
+      "name": "Named government spokesperson statements",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["x.com", "state.gov"],
+      "incentive_baseline": "MEDIUM",
+      "incentive_note": "Leavitt presser, Araghchi X, named officials. Incentive varies by actor — assess per statement.",
+      "active": true
+    },
+    {
+      "id": "T2-001",
+      "name": "Reuters",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["reuters.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Wire service. Incentive for accuracy over narrative. Unnamed source claims require Gate 0.3 flag.",
+      "active": true
+    },
+    {
+      "id": "T2-002",
+      "name": "AP",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["apnews.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Wire service. Unnamed official sources common — flag per Gate 0.3.",
+      "active": true
+    },
+    {
+      "id": "T2-003",
+      "name": "Bloomberg",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["bloomberg.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Strong on shipping, energy, financial data. Commercial tracking data (Kpler, ship-tracking) is LOW incentive.",
+      "active": true
+    },
+    {
+      "id": "T2-004",
+      "name": "Al Jazeera",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["aljazeera.com"],
+      "incentive_baseline": "LOW-MEDIUM",
+      "incentive_note": "Qatar state-funded. Strong on Middle East reporting. Editorial framing occasionally reflects Gulf state positioning.",
+      "active": true
+    },
+    {
+      "id": "T2-005",
+      "name": "NBC News live updates",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["nbcnews.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Live blog format. Named official quotes carry Tier 1 weight where attributed.",
+      "active": true
+    },
+    {
+      "id": "T2-006",
+      "name": "CBS News live updates",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["cbsnews.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Live blog format. Strong on US government and military sourcing.",
+      "active": true
+    },
+    {
+      "id": "T2-007",
+      "name": "NPR",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["npr.org"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Public radio. Strong on policy and humanitarian reporting. LOW incentive for factual claims.",
+      "active": true
+    },
+    {
+      "id": "T3-001",
+      "name": "Tasnim News Agency",
+      "tier": 3,
+      "category": "Watch / Corroboration Required",
+      "domains": ["tasnimnews.com"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "IRGC-linked. All claims require Tier 1/2 corroboration before entering Part 1. TQL WARNING mandatory on fragile facts.",
+      "active": true
+    },
+    {
+      "id": "T3-002",
+      "name": "Mehr News Agency",
+      "tier": 3,
+      "category": "Watch / Corroboration Required",
+      "domains": ["mehrnews.com"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "Iranian state, unattributed. Use for signal detection only. Never sole source for fact table.",
+      "active": true
+    },
+    {
+      "id": "T3-003",
+      "name": "WANA News Agency",
+      "tier": 3,
+      "category": "Watch / Corroboration Required",
+      "domains": ["wanaen.com"],
+      "incentive_baseline": "MEDIUM",
+      "incentive_note": "Iranian state-adjacent. Useful for NIORDC and infrastructure damage reports. Cross-verify before use.",
+      "active": true
+    },
+    {
+      "id": "T3-004",
+      "name": "House of Saud / Conflict Pulse",
+      "tier": 3,
+      "category": "Specialist Analysis",
+      "domains": ["houseofsaud.com"],
+      "incentive_baseline": "LOW-MEDIUM",
+      "incentive_note": "Specialist conflict analysis. Strong on IRGC command structure and Saudi energy infrastructure. Analytical framing — not primary sourcing.",
+      "active": true
+    },
+    {
+      "id": "T4-001",
+      "name": "Wikipedia — Iran war timeline",
+      "tier": 4,
+      "category": "Editorial Assembly",
+      "domains": ["en.wikipedia.org"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Editorial assembly. Useful for chronological verification and forward record. Never sole source. Gate 0.3 carry-forward flag required.",
+      "active": true
+    },
+    {
+      "id": "T4-002",
+      "name": "ACLED conflict monitor",
+      "tier": 4,
+      "category": "Editorial Assembly",
+      "domains": ["acleddata.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Conflict data aggregator. Useful for cumulative strike counts and pattern analysis. Lag of several days expected — Gate 0.1 flag required.",
+      "active": true
+    }
+  ]
+}
