@@ -1,0 +1,11 @@
+{
+  "ref": "PRED-NNN-X",
+  "status": "[current five-state outcome or PENDING/WATCH/ELEVATED]",
+  "edition_origin": "[edition number]",
+  "flag_text": "[exact prediction text]",
+  "window": "[closing condition or date]",
+  "outcome": "[null or outcome description]",
+  "status_history": [
+    {"edition": "[NNN]", "status": "[status at that edition]"}
+  ]
+}
