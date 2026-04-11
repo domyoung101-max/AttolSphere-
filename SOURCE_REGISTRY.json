@@ -1,8 +1,8 @@
 {
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "last_updated": "Edition 015 Evening Sweep 10 April 2026",
-  "description": "Named source registry for AtollSphere 18-feed sweep. Used for automated tier classification and incentive baseline assignment.",
-  "sources": [
+  "description": "Named source registry for AtollSphere. Core 18 feeds are mandatory per sweep. Supplementary feeds are used for corroboration and specialist analysis as required.",
+  "core_sweep_feeds": [
     {
       "id": "T1-001",
       "name": "Trump Truth Social / White House official statements",
@@ -11,6 +11,7 @@
       "domains": ["truthsocial.com", "whitehouse.gov"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Domestic victory framing consistent across statements. Gate 0.2 mandatory on all Tier 1 claims.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -21,6 +22,7 @@
       "domains": ["centcom.mil"],
       "incentive_baseline": "MEDIUM",
       "incentive_note": "Operational claims serve force protection and strategic signalling. Casualty figures independently verifiable.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -31,6 +33,7 @@
       "domains": ["idf.il", "x.com/IDF"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Strike claims and casualty figures serve domestic and international legitimacy. Gate 0.2 mandatory.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -41,6 +44,7 @@
       "domains": ["irna.ir", "x.com/Araghchi"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Victory framing and maximalist demand signalling serve domestic hardliner audience. Competing primary always required per Gate 0.2.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -50,7 +54,8 @@
       "category": "Primary Source",
       "domains": ["x.com", "state.gov"],
       "incentive_baseline": "MEDIUM",
-      "incentive_note": "Leavitt presser, Araghchi X, named officials. Incentive varies by actor — assess per statement.",
+      "incentive_note": "Leavitt presser, Araghchi X, Ghalibaf X, Netanyahu X. Incentive varies by actor — assess per statement.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -61,6 +66,7 @@
       "domains": ["reuters.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Wire service. Incentive for accuracy over narrative. Unnamed source claims require Gate 0.3 flag.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -71,6 +77,7 @@
       "domains": ["apnews.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Wire service. Unnamed official sources common — flag per Gate 0.3.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -81,6 +88,7 @@
       "domains": ["bloomberg.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Strong on shipping, energy, financial data. Commercial tracking data (Kpler, ship-tracking) is LOW incentive.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -91,6 +99,7 @@
       "domains": ["aljazeera.com"],
       "incentive_baseline": "LOW-MEDIUM",
       "incentive_note": "Qatar state-funded. Strong on Middle East reporting. Editorial framing occasionally reflects Gulf state positioning.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -101,6 +110,7 @@
       "domains": ["nbcnews.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Live blog format. Named official quotes carry Tier 1 weight where attributed.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -111,6 +121,7 @@
       "domains": ["cbsnews.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Live blog format. Strong on US government and military sourcing.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -120,7 +131,8 @@
       "category": "High-Authority Secondary",
       "domains": ["npr.org"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Public radio. Strong on policy and humanitarian reporting. LOW incentive for factual claims.",
+      "incentive_note": "Public radio. Strong on policy and humanitarian reporting.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -131,6 +143,7 @@
       "domains": ["tasnimnews.com"],
       "incentive_baseline": "HIGH",
       "incentive_note": "IRGC-linked. All claims require Tier 1/2 corroboration before entering Part 1. TQL WARNING mandatory on fragile facts.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -141,6 +154,7 @@
       "domains": ["mehrnews.com"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Iranian state, unattributed. Use for signal detection only. Never sole source for fact table.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -151,6 +165,7 @@
       "domains": ["wanaen.com"],
       "incentive_baseline": "MEDIUM",
       "incentive_note": "Iranian state-adjacent. Useful for NIORDC and infrastructure damage reports. Cross-verify before use.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -161,6 +176,7 @@
       "domains": ["houseofsaud.com"],
       "incentive_baseline": "LOW-MEDIUM",
       "incentive_note": "Specialist conflict analysis. Strong on IRGC command structure and Saudi energy infrastructure. Analytical framing — not primary sourcing.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -171,6 +187,7 @@
       "domains": ["en.wikipedia.org"],
       "incentive_baseline": "LOW",
       "incentive_note": "Editorial assembly. Useful for chronological verification and forward record. Never sole source. Gate 0.3 carry-forward flag required.",
+      "mandatory_sweep": true,
       "active": true
     },
     {
@@ -181,6 +198,163 @@
       "domains": ["acleddata.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Conflict data aggregator. Useful for cumulative strike counts and pattern analysis. Lag of several days expected — Gate 0.1 flag required.",
+      "mandatory_sweep": true,
+      "active": true
+    }
+  ],
+  "supplementary_feeds": [
+    {
+      "id": "S-T1-001",
+      "name": "Netanyahu X / Israeli PM Office",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["x.com/Netanyahu", "pmo.gov.il"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "Domestic political survival framing. Lebanon and Iran statements serve coalition management. Gate 0.2 mandatory.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T1-002",
+      "name": "Ghalibaf X",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["x.com/mb_ghalibaf"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "IRGC-origin negotiator. Statements serve hardliner domestic audience and leverage positioning simultaneously. Gate 0.2 mandatory.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-001",
+      "name": "Al-Monitor",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["al-monitor.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Strong on Middle East policy and Iran analysis. Reliable on shipping and Hormuz tracking. LOW incentive for data reporting.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-002",
+      "name": "Atlantic Council",
+      "tier": 2,
+      "category": "Policy Analysis",
+      "domains": ["atlanticcouncil.org"],
+      "incentive_baseline": "LOW-MEDIUM",
+      "incentive_note": "US-aligned policy advocacy. Strong on sanctions and regulatory analysis. Factually grounded but editorially pro-Western.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-003",
+      "name": "Times of Israel / Haaretz",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["timesofisrael.com", "haaretz.com"],
+      "incentive_baseline": "MEDIUM",
+      "incentive_note": "Israeli perspective. Strong on IDF operations and Netanyahu political dynamics. Incentive reflects Israeli domestic audience.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-004",
+      "name": "Middle East Eye",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["middleeasteye.net"],
+      "incentive_baseline": "LOW-MEDIUM",
+      "incentive_note": "Qatar-linked funding. Strong on primary document publication — full text statements. Editorial framing occasionally pro-Iran.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-005",
+      "name": "The Soufan Center",
+      "tier": 2,
+      "category": "Specialist Analysis",
+      "domains": ["thesoufancenter.org"],
+      "incentive_baseline": "LOW-MEDIUM",
+      "incentive_note": "Former intelligence community. Strong on IRGC structure, Iran domestic politics, and proxy network analysis. Analytical framing — not primary sourcing.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-006",
+      "name": "Iran International",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["iranintl.com"],
+      "incentive_baseline": "MEDIUM",
+      "incentive_note": "London-based, Saudi-linked funding. Strong on Iranian domestic politics and IRGC reporting. Anti-regime framing — cross-verify claims about internal Iranian dynamics.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-007",
+      "name": "Kpler",
+      "tier": 2,
+      "category": "Commercial Data",
+      "domains": ["kpler.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Commercial ship and cargo tracking. LOW incentive — data product, not advocacy. Gate 0.1 flag required for data older than 48h.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-008",
+      "name": "Lloyd's List",
+      "tier": 2,
+      "category": "Commercial Data",
+      "domains": ["lloydslist.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Shipping industry authority. Strong on vessel counts, port data, insurance risk. LOW incentive for data reporting.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T2-009",
+      "name": "CNBC",
+      "tier": 2,
+      "category": "High-Authority Secondary",
+      "domains": ["cnbc.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Strong on energy markets, oil pricing, and US economic data. LOW incentive for market data reporting.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T3-001",
+      "name": "Press TV",
+      "tier": 3,
+      "category": "Watch / Corroboration Required",
+      "domains": ["presstv.ir"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "Iranian state English-language broadcaster. Use for IRGC doctrine statements and official Iranian framing only. Never sole source. TQL WARNING mandatory.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T3-002",
+      "name": "IRIB",
+      "tier": 3,
+      "category": "Watch / Corroboration Required",
+      "domains": ["irib.ir"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "Iranian state broadcaster. Useful for domestic Iranian narrative tracking. All claims require Tier 1/2 corroboration.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "S-T3-003",
+      "name": "Fars News Agency",
+      "tier": 3,
+      "category": "Watch / Corroboration Required",
+      "domains": ["farsnews.ir"],
+      "incentive_baseline": "HIGH",
+      "incentive_note": "Semi-official Iranian. IRGC-adjacent. Useful for Iranian delegation logistics and operational claims. Cross-verify before use.",
+      "mandatory_sweep": false,
       "active": true
     }
   ]
