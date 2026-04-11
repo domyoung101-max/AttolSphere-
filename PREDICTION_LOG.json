@@ -1,8 +1,8 @@
 {
   "version": "v1.4.0",
-  "last_updated": "Edition 018 Morning Sweep 11 April 2026",
+  "last_updated": "Edition 019 Evening Sweep 11 April 2026",
   "schema_version": "v1.2.1",
-  "description": "Cumulative prediction log for AtollSphere. v1.4.0 adds three fields to every entry per ARCHITECTURE.md v1.2.1 Section 12 Step 6: confidence_at_prediction (confidence level assigned when prediction was made), heuristics_applied (which of H1-H6 informed the prediction), dominant_disconfirmation_condition (what evidence would produce CONTRADICTED — mandatory for WATCH, PARTIAL, AMBIGUOUS). All entries from Editions 001-018 included. No silent drops. Backfilled fields marked BACKFILL where not recorded at time of original prediction.",
+  "description": "Cumulative prediction log for AtollSphere. v1.4.0 adds three fields to every entry per ARCHITECTURE.md v1.2.1 Section 12 Step 6: confidence_at_prediction (confidence level assigned when prediction was made), heuristics_applied (which of H1-H6 informed the prediction), dominant_disconfirmation_condition (what evidence would produce CONTRADICTED — mandatory for WATCH, PARTIAL, AMBIGUOUS). All entries from Editions 001-019 included. No silent drops. Backfilled fields marked BACKFILL where not recorded at time of original prediction.",
   "predictions": [
     {
       "ref": "PRED-001-A",
@@ -117,7 +117,7 @@
       "confidence_at_prediction": "MEDIUM",
       "heuristics_applied": ["H1", "H3"],
       "dominant_disconfirmation_condition": "Houthis formally activate BAM closure or conduct confirmed attack on BAM shipping — would produce CONTRADICTED. Note: senior Iranian source threatened BAM closure if situation escalates (Ed018) — monitor.",
-      "confirming_evidence": "BAM not activated through Ed018 sweep",
+      "confirming_evidence": "BAM not activated through Ed019 sweep (1600 GMT 11 April 2026)",
       "contradicting_evidence": "Senior Iranian source threatened BAM closure if situation escalates — Ed018 signal",
       "outcome": null
     },
@@ -138,19 +138,20 @@
       "ref": "PRED-008-D",
       "status": "ESCALATING",
       "edition_origin": "008",
-      "flag_text": "India oil waiver — GL 134A lapsed 11 April; GL U (Iranian crude) expires 19 April. No GL 134B on OFAC register at Ed018 sweep.",
+      "flag_text": "India oil waiver — GL 134A lapsed 11 April; GL U (Iranian crude) expires 19 April. GL 134B NOT on OFAC register at Ed019 sweep (1600 GMT). 15 April trigger active.",
       "window": "15 April (GL 134B trigger) / 19 April (GL U expiry)",
       "confidence_at_prediction": "HIGH",
       "heuristics_applied": ["H2", "H6"],
-      "dominant_disconfirmation_condition": "GL U renewed beyond 19 April without Hormuz deal — would produce H-D3 (energy market stability prioritised over sanctions leverage) and partially CONTRADICT the escalation framing",
-      "confirming_evidence": "GL 134A lapsed 1201 EDT 11 April confirmed. GL 134B not on OFAC register at 1221 GMT Ed018 sweep.",
+      "dominant_disconfirmation_condition": "GL U renewed beyond 19 April without Hormuz deal — would produce H-D3 (energy market stability prioritised over sanctions leverage) and partially CONTRADICT the escalation framing. GL 134B issued before 15 April — would produce CONTRADICTED.",
+      "confirming_evidence": "GL 134A lapsed 1201 EDT 11 April confirmed. GL 134B not on OFAC register at 1221 GMT Ed018 sweep. GL 134B NOT on OFAC register at 1600 GMT Ed019 sweep — GL 134B absence on Islamabad Day 1 may be deliberate leverage signal (H6 suppressed intersection flagged — cannot distinguish at sweep time). 15 April trigger active: no GL 134B by 15 April = ESCALATING CONFIRMED.",
       "contradicting_evidence": null,
       "outcome": null,
       "status_history": [
         {"edition": "008", "status": "WATCH"},
         {"edition": "016", "status": "DEVELOPING"},
         {"edition": "017", "status": "ESCALATING"},
-        {"edition": "018", "status": "ESCALATING — GL 134A lapsed confirmed, GL 134B not issued"}
+        {"edition": "018", "status": "ESCALATING — GL 134A lapsed confirmed, GL 134B not issued"},
+        {"edition": "019", "status": "ESCALATING — GL 134B NOT on OFAC register at 1600 GMT Ed019 sweep. 15 April trigger active. H6 suppressed intersection flagged (deliberate leverage signal vs administrative gap — indeterminate)."}
       ]
     },
     {
@@ -266,7 +267,7 @@
       "confidence_at_prediction": "MEDIUM",
       "heuristics_applied": ["H1", "H2", "H3"],
       "dominant_disconfirmation_condition": "Iranian or US delegation departs Islamabad without issuing any joint statement or agreed document before 14 April — would produce CONTRADICTED",
-      "confirming_evidence": "Both delegations arrived Islamabad 11 April. Talks commenced. Vance met Sharif. Iranian delegation met Sharif and Munir. No communique at 1221 GMT Ed018 sweep.",
+      "confirming_evidence": "Both delegations arrived Islamabad 11 April. Talks commenced. Vance met Sharif. Iranian delegation met Sharif and Munir. No communique at 1221 GMT Ed018 sweep. Ed019 (1600 GMT): talks confirmed as at least partially DIRECT — analytically significant format upgrade from proximity (first US-Iran direct high-level engagement since 1979). No communique at 1600 GMT Ed019. No departure. Window remains open through 14 April.",
       "contradicting_evidence": null,
       "outcome": null,
       "five_state_pre_assignment": {
@@ -285,7 +286,7 @@
       "heuristics_applied": ["H1", "H2", "H4"],
       "dominant_disconfirmation_condition": "Israel intensifies Lebanon strikes at or after 15 April Washington talks with no pause — would produce CONTRADICTED. Washington talks cancelled entirely — would produce CONTRADICTED.",
       "confirming_evidence": null,
-      "contradicting_evidence": "Strikes continued 11 April. 13 Lebanese security forces killed Nabatieh 10 April. Netanyahu stated strikes would continue with force, precision and determination.",
+      "contradicting_evidence": "Strikes continued 11 April. 13 Lebanese security forces killed Nabatieh 10 April. Netanyahu stated strikes would continue with force, precision and determination. Ed019: Nabatieh strikes 11 April — 10 killed including 3 emergency workers. Washington talks (Israel-Lebanon) confirmed for next week but framed as preliminary only by Lebanese source — not yet a verifiable pause signal.",
       "outcome": null,
       "five_state_pre_assignment": {
         "verifiable_pause_or_reduction": "DEVELOPING upgrade",
@@ -315,7 +316,7 @@
       "confidence_at_prediction": "HIGH",
       "heuristics_applied": ["H1", "H3", "H6"],
       "dominant_disconfirmation_condition": "Verified transit volume exceeds 15 ships/day for three or more consecutive days before 15 April — would produce CONTRADICTED. Single-day spike above 15 without sustained follow-through = AMBIGUOUS.",
-      "confirming_evidence": "Day 3 ceasefire: 2 ships (lowest since ceasefire). Day 1: 5 ships. Day 2: 7 ships. Kpler, MarineTraffic, S&P Global consistent.",
+      "confirming_evidence": "Day 1: 5 ships. Day 2: 7 ships. Day 3 ceasefire: 2 ships (lowest since ceasefire). Day 4 (Ed019 sweep): ~handful to ~10 ships/day (Kpler/MarineTraffic/CNN) — well below 15/day threshold. Primarily Chinese tankers and bulk carriers. AIS single-source constraint flagged (MarineTraffic, Kpler, S&P Global share AIS network — Gate 0.5 applies). 600+ large vessels stranded. PRED-018-B on track toward CONFIRMED.",
       "contradicting_evidence": null,
       "outcome": null,
       "five_state_pre_assignment": {
