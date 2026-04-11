@@ -370,8 +370,13 @@ def domain_quality_block(assessment_text, styles):
 def source_block(sources, styles):
     """Formatted source list. Returns a list of flowables.
 
-    Each source dict: name, tier, category, body, and optionally
-    incentive (str) and url (str).
+    Each source dict: name, tier, category, body, and optionally:
+        incentive (str)
+        upstream_dependency (str or None)
+            None  → rendered as "Upstream: INDEPENDENT"
+            str   → rendered verbatim as "Upstream: <value>"
+            Key absent → upstream line not rendered (backward-compatible)
+        url (str)
     """
     flowables = []
     for i, s in enumerate(sources, 1):
@@ -388,6 +393,14 @@ def source_block(sources, styles):
                 f'Incentive: {s["incentive"]}',
                 ParagraphStyle('inc', fontName='Helvetica-Oblique',
                                fontSize=7, textColor=AMBER)))
+        # Gate 0.5 — upstream dependency field (grey italic, 7pt)
+        if 'upstream_dependency' in s:
+            ud = s['upstream_dependency']
+            upstream_label = 'INDEPENDENT' if ud is None else ud
+            flowables.append(Paragraph(
+                f'Upstream: {upstream_label}',
+                ParagraphStyle('ups', fontName='Helvetica-Oblique',
+                               fontSize=7, textColor=MID_GREY, spaceAfter=2)))
         if s.get('url'):
             flowables.append(Paragraph(s['url'], styles['small']))
         flowables.append(thin_rule())
