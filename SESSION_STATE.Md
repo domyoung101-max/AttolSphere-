@@ -251,14 +251,19 @@ These apply to every future edition of Case B until superseded or the case close
 
 -----
 
-## ARCHITECTURE PATCHES — v1.2.0
+## ARCHITECTURE PATCHES — v1.2.0 APPLIED / v1.2.1 PENDING
 
-All four patches applied:
+### v1.2.0 — All four patches applied:
 
 - C3 updated: silence, partial compliance, strategic ambiguity must be pre-assigned to named five-state outcome before window opens.
 - Bypass Override Protocol: Tier 1/2 fact materially changing a case status tag resets bypass ceiling for that case only, that edition only. Maximum one override per case per edition.
 - status_history mandatory in prediction log schema — appended never overwritten.
 - SYSTEM_CHANGE_LOG.md created, referenced in Section 17 — all PMM rule changes logged permanently.
+
+### v1.2.1 — PENDING (formalise via Claude Code):
+
+- Wikipedia usage rule: forward-looking timeline data is directional corroboration only. Cannot be load-bearing for hypothesis probability ranges or confidence levels. Cannot satisfy Gate 0.3 for forward-looking claims. Tier 4 dependency test mandatory in TQL Part 4 for any finding relying on Wikipedia forward data. Gate 0.4 must note editorial assembly risk. Full rule text in SESSION INSTRUCTIONS above.
+- Case A corroboration split: H-A2 must separate Tier 1/2 process signals (Leg 1) from Tier 4 directional corroboration (Leg 2) in Part 3. Tier 4 dependency test mandatory as fourth TQL item. Full rule text in SESSION INSTRUCTIONS above.
 
 -----
 
@@ -268,6 +273,7 @@ All four patches applied:
 - [ ] Claude Code: patch build_core.py to include logos in PDF header and cover
 - [ ] Update PREDICTION_LOG.json with Edition 017 and 018 outcomes
 - [ ] Backfill status_history for Editions 001-012 when log data available
+- [ ] Claude Code: formalise ARCHITECTURE.md v1.2.1 — Wikipedia usage rule and Case A corroboration split (full rule text in SESSION INSTRUCTIONS)
 
 -----
 
@@ -310,6 +316,29 @@ Theatre of Rigor — skeleton appearance of CDIT structure without consistent ex
 ### CASE B STANDING ENHANCEMENTS — APPLY FROM ED018 ONWARDS:
 
 See External Review Log above. Accepted points 2, 3, 4 (partial), 5 (partial), 6 are standing improvements. Point 1 (H1 reclassification) is permanently rejected — do not apply under any circumstances.
+
+### CASE A STANDING ENHANCEMENTS — APPLY FROM ED019 ONWARDS:
+
+Prompted by ChatGPT Review 001 critique and operator analysis. Two mandatory changes to Case A CDIT structure in every edition while Islamabad process is active.
+
+**Part 3 — Corroboration split (mandatory):** H-A2 (process continuation hypothesis) must separate its supporting evidence into two explicitly labelled legs:
+
+- Leg 1 — Tier 1/2 process signals only: observable facts at sweep time (delegations present/absent, SNSC window statements, Pakistani FM framing, H3 beneficiary analysis). These must independently sustain the stated probability range without reference to any Tier 4 source.
+- Leg 2 — Tier 4 directional only: Wikipedia forward record of continuation dates. Labelled explicitly as directional corroboration, not load-bearing. If Leg 1 cannot sustain H-A2 probability range without Leg 2, reduce the range and note the cap.
+
+**Part 4 — Tier 4 dependency test (mandatory, fourth TQL item):** Run the following test explicitly in the edition text: “H-A2 stripped of Wikipedia forward record — does Tier 1/2 evidence alone support the stated probability range? [Yes/No + one sentence reasoning].” If No: revise probability range downward and note confidence ceiling impact. If Yes: the critique is answered on the record and confidence level stands.
+
+### WIKIPEDIA USAGE RULE — IN FORCE FROM ED019:
+
+Wikipedia forward-looking timeline data (future session dates, predicted outcomes, post-sweep developments) may be used as **directional corroboration only**. Hard constraints:
+
+- Cannot be the sole or primary support for any hypothesis probability range.
+- Cannot satisfy Gate 0.3 (source-to-claim traceability) for any forward-looking claim.
+- Cannot be used to justify a confidence level that Tier 1/2 evidence alone would not support.
+- Any finding that relies on Wikipedia forward data must pass the Tier 4 dependency test in TQL Part 4.
+- Gate 0.4 incentive assessment for Wikipedia must note: editorial assembly of same Tier 1/2 feeds already swept, plus potential forward projection by editors — treat as Tier 4 with HIGH editorial incentive uncertainty, not neutral aggregation.
+
+**Pending architecture patch:** This rule is to be formalised as ARCHITECTURE.md v1.2.1. Flag for next Claude Code session. Until formalised, this SESSION_STATE entry is the operative rule.
 
 ### OTHER INSTRUCTIONS:
 
