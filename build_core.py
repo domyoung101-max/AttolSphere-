@@ -417,13 +417,42 @@ def make_page_callbacks(edition, sweep_str, date_str):
     edition   : str  e.g. '013'
     sweep_str : str  e.g. 'MORNING SWEEP'
     date_str  : str  e.g. '09 APRIL 2026'
+
+    Logo support
+    ------------
+    The factory attempts to load atollsphere_logo_v2.png (cover page) and
+    ls_logo_v2.png (content page header) from the repository root.
+    If either file is absent the build continues in text-only mode — no error
+    is raised.  Upload the PNG files to the repo root to activate logo rendering.
     """
+    # ── Logo pre-load (graceful fallback if files not yet uploaded) ──────────
+    _repo_root = os.path.dirname(os.path.abspath(__file__))
+    _as_logo_path = os.path.join(_repo_root, 'atollsphere_logo_v2.png')
+    _ls_logo_path = os.path.join(_repo_root, 'ls_logo_v2.png')
+
+    try:
+        from reportlab.lib.utils import ImageReader as _ImageReader
+        _as_logo = _ImageReader(_as_logo_path) if os.path.exists(_as_logo_path) else None
+        _ls_logo = _ImageReader(_ls_logo_path) if os.path.exists(_ls_logo_path) else None
+    except Exception:
+        # ── LOGO PLACEHOLDER — logos not yet uploaded; text-only mode active ─
+        _as_logo = None
+        _ls_logo = None
 
     def on_cover(canvas, doc):
         canvas.saveState()
         # Teal strip top
         canvas.setFillColor(TEAL)
         canvas.rect(0, PAGE_H - 4*mm, PAGE_W, 4*mm, fill=1, stroke=0)
+        # AtollSphere logo — upper-left of cover, below teal strip
+        # Rendered only when atollsphere_logo_v2.png is present in repo root.
+        # ── LOGO PLACEHOLDER: upload atollsphere_logo_v2.png to activate ──
+        if _as_logo is not None:
+            canvas.drawImage(
+                _as_logo,
+                MARGIN, PAGE_H - 28*mm,
+                width=50*mm, height=20*mm,
+                preserveAspectRatio=True, mask='auto')
         # Navy footer bar
         canvas.setFillColor(NAVY)
         canvas.rect(0, 0, PAGE_W, 14*mm, fill=1, stroke=0)
@@ -439,13 +468,24 @@ def make_page_callbacks(edition, sweep_str, date_str):
         # Navy header bar
         canvas.setFillColor(NAVY)
         canvas.rect(0, PAGE_H - 13*mm, PAGE_W, 13*mm, fill=1, stroke=0)
-        canvas.setFont('Helvetica-Bold', 7)
-        canvas.setFillColor(TEAL)
-        canvas.drawString(MARGIN, PAGE_H - 8*mm, 'LS')
+        # LS logo or text-only fallback
+        # ── LOGO PLACEHOLDER: upload ls_logo_v2.png to activate logo mode ──
+        if _ls_logo is not None:
+            canvas.drawImage(
+                _ls_logo,
+                MARGIN, PAGE_H - 12*mm,
+                width=22*mm, height=9*mm,
+                preserveAspectRatio=True, mask='auto')
+        else:
+            # Text-only mode — preserved exactly until logos are uploaded
+            canvas.setFont('Helvetica-Bold', 7)
+            canvas.setFillColor(TEAL)
+            canvas.drawString(MARGIN, PAGE_H - 8*mm, 'LS')
+            canvas.setFillColor(WHITE)
+            canvas.setFont('Helvetica', 6.5)
+            canvas.drawString(MARGIN + 8*mm, PAGE_H - 8*mm, 'AI SYSTEMS')
+        canvas.setFont('Helvetica', 6.5)
         canvas.setFillColor(WHITE)
-        canvas.setFont('Helvetica', 6.5)
-        canvas.drawString(MARGIN + 8*mm, PAGE_H - 8*mm, 'AI SYSTEMS')
-        canvas.setFont('Helvetica', 6.5)
         canvas.drawRightString(
             PAGE_W - MARGIN, PAGE_H - 8*mm,
             f'ATOLLSPHERE BRIEF \u00b7 EDITION {edition} \u00b7 {sweep_str} \u00b7 {date_str}')
