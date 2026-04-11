@@ -213,23 +213,59 @@ def fact_table(rows, styles):
 def hyp_table(hypotheses, styles):
     """N-column hypothesis comparison table.
 
-    hypotheses = [{'heading': str, 'body': str, 'probability_range': str}, ...]
+    hypotheses = [
+        {
+            'heading':           str,
+            'body':              str,
+            'probability_range': str,
+            # Optional — Case A corroboration split (AI-002 / ARCHITECTURE v1.2.1 §4 Pt 3)
+            'leg_1': str,   # Tier 1/2 corroboration leg text
+            'leg_2': str,   # Tier 4 directional corroboration leg text
+        },
+        ...
+    ]
+
+    When a hypothesis entry includes both 'leg_1' and 'leg_2', they are
+    rendered as two clearly labelled sub-rows beneath the body text:
+        "LEG 1 — Tier 1/2 only:"   in teal bold
+        "LEG 2 — Tier 4 directional only:"  in amber italic
     """
     n = len(hypotheses)
     col_w = 174 * mm / n
-    headers, bodies = [], []
+    teal_hex  = TEAL.hexval()[2:]   # strip '0x' prefix
+    amber_hex = AMBER.hexval()[2:]
+
+    headers = []
+    bodies  = []
     for h in hypotheses:
-        teal_hex = TEAL.hexval()[2:]  # strip '0x' prefix
         headers.append(
             Paragraph(
                 f'<b>{h["heading"]}</b><br/>'
                 f'<font size=6 color="#{teal_hex}">{h["probability_range"]}</font>',
                 ParagraphStyle('hh', fontName='Helvetica-Bold', fontSize=7.5,
                                textColor=NAVY, leading=11)))
-        bodies.append(
-            Paragraph(h['body'],
-                ParagraphStyle('hb', fontName='Helvetica', fontSize=7.5,
-                               leading=10, textColor=CHARCOAL)))
+
+        body_para = Paragraph(
+            h['body'],
+            ParagraphStyle('hb', fontName='Helvetica', fontSize=7.5,
+                           leading=10, textColor=CHARCOAL))
+
+        if h.get('leg_1') and h.get('leg_2'):
+            # Leg 1/Leg 2 sub-rows — Case A corroboration split
+            leg1_para = Paragraph(
+                f'<b><font color="#{teal_hex}">LEG 1 \u2014 Tier 1/2 only:</font></b>'
+                f' {h["leg_1"]}',
+                ParagraphStyle('hl1', fontName='Helvetica', fontSize=7.5,
+                               leading=10, textColor=CHARCOAL, spaceBefore=4))
+            leg2_para = Paragraph(
+                f'<i><font color="#{amber_hex}">LEG 2 \u2014 Tier 4 directional only:'
+                f'</font></i> {h["leg_2"]}',
+                ParagraphStyle('hl2', fontName='Helvetica-Oblique', fontSize=7.5,
+                               leading=10, textColor=CHARCOAL, spaceBefore=2))
+            bodies.append([body_para, leg1_para, leg2_para])
+        else:
+            bodies.append(body_para)
+
     tbl = Table([headers, bodies], colWidths=[col_w] * n)
     line_cmds = [
         ('LINEAFTER', (i - 1, 0), (i - 1, -1), 0.5, TEAL)
