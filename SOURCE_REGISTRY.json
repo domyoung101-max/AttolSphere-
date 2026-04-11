@@ -1,8 +1,8 @@
 {
-  "version": "v1.1.0",
+  "version": "v1.3.0",
   "last_updated": "Edition 015 Evening Sweep 10 April 2026",
-  "description": "Named source registry for AtollSphere. Core 18 feeds are mandatory per sweep. Supplementary feeds are used for corroboration and specialist analysis as required.",
-  "core_sweep_feeds": [
+  "description": "Named source registry for AtollSphere. mandatory_sweep true = core 18 feeds required every sweep. mandatory_sweep false = supplementary feeds used for corroboration and specialist analysis as required.",
+  "sources": [
     {
       "id": "T1-001",
       "name": "Trump Truth Social / White House official statements",
@@ -59,6 +59,39 @@
       "active": true
     },
     {
+      "id": "T1-006",
+      "name": "International Maritime Organization (IMO)",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["imo.org"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "UN body. Vessel attack confirmations carry Tier 1 weight. Incident reports are authoritative. LOW incentive — no political agenda.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T1-007",
+      "name": "OFAC / US Treasury",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["home.treasury.gov", "ofac.treas.gov"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Primary source for sanctions announcements, waiver decisions, and General License publications. LOW incentive — regulatory authority. Waiver decisions are Tier 1 events.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T1-008",
+      "name": "OPEC+ official communications",
+      "tier": 1,
+      "category": "Primary Source",
+      "domains": ["opec.org"],
+      "incentive_baseline": "MEDIUM",
+      "incentive_note": "Primary source for production decisions and quota announcements. MEDIUM incentive — producer bloc cohesion framing. Gate 0.2 mandatory when competing producer statements exist.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
       "id": "T2-001",
       "name": "Reuters",
       "tier": 2,
@@ -87,7 +120,7 @@
       "category": "High-Authority Secondary",
       "domains": ["bloomberg.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Strong on shipping, energy, financial data. Commercial tracking data (Kpler, ship-tracking) is LOW incentive.",
+      "incentive_note": "Strong on shipping, energy, financial data. Commercial tracking data is LOW incentive.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -133,6 +166,105 @@
       "incentive_baseline": "LOW",
       "incentive_note": "Public radio. Strong on policy and humanitarian reporting.",
       "mandatory_sweep": true,
+      "active": true
+    },
+    {
+      "id": "T2-008",
+      "name": "MarineTraffic",
+      "tier": 2,
+      "category": "Maritime Data",
+      "domains": ["marinetraffic.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Real-time AIS vessel tracking. Gate 0.1 flag required for data older than 24h. Note: vessels may spoof or disable AIS in conflict zones.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T2-009",
+      "name": "S&P Global Market Intelligence",
+      "tier": 2,
+      "category": "Commercial Data",
+      "domains": ["spglobal.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Shipping and commodity data. Strong on vessel transit counts and cargo data.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T2-010",
+      "name": "BIMCO",
+      "tier": 2,
+      "category": "Maritime Industry",
+      "domains": ["bimco.org"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "International shipowners association. Strong on industry risk assessments and transit recommendations. Represents commercial shipping interests.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T2-011",
+      "name": "Windward",
+      "tier": 2,
+      "category": "Maritime Data",
+      "domains": ["windward.ai"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Maritime AI analytics. Strong on vessel behaviour and traffic pattern analysis. Gate 0.1 flag required — data lag varies.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T2-012",
+      "name": "Financial Times",
+      "tier": 2,
+      "category": "Financial Source",
+      "domains": ["ft.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Strong on sanctions, Iran nuclear deal economics, Gulf state finance, and energy market analysis. LOW incentive for data reporting.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T2-013",
+      "name": "Wall Street Journal",
+      "tier": 2,
+      "category": "Financial Source",
+      "domains": ["wsj.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Strong on US Treasury decisions, sanctions policy, and energy markets. LOW incentive for data reporting. Named sourcing required per Gate 0.3.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T2-014",
+      "name": "IEA — International Energy Agency",
+      "tier": 2,
+      "category": "Energy Data",
+      "domains": ["iea.org"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Supply disruption data and oil market assessments. Authoritative on global energy flows. LOW incentive — intergovernmental body. Gate 0.1 flag required for data older than one week.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T2-015",
+      "name": "Argus Media",
+      "tier": 2,
+      "category": "Energy Data",
+      "domains": ["argusmedia.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "Specialist energy pricing and market intelligence. Strong on Iranian crude, refinery damage, and Gulf energy infrastructure. LOW incentive — commercial data product.",
+      "mandatory_sweep": false,
+      "active": true
+    },
+    {
+      "id": "T2-016",
+      "name": "AAA",
+      "tier": 2,
+      "category": "Consumer Data",
+      "domains": ["gasprices.aaa.com"],
+      "incentive_baseline": "LOW",
+      "incentive_note": "US fuel price tracking. Useful for domestic economic impact reporting. LOW incentive — consumer advocacy body.",
+      "mandatory_sweep": false,
       "active": true
     },
     {
@@ -200,9 +332,7 @@
       "incentive_note": "Conflict data aggregator. Useful for cumulative strike counts and pattern analysis. Lag of several days expected — Gate 0.1 flag required.",
       "mandatory_sweep": true,
       "active": true
-    }
-  ],
-  "supplementary_feeds": [
+    },
     {
       "id": "S-T1-001",
       "name": "Netanyahu X / Israeli PM Office",
@@ -232,7 +362,7 @@
       "category": "High-Authority Secondary",
       "domains": ["al-monitor.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Strong on Middle East policy and Iran analysis. Reliable on shipping and Hormuz tracking. LOW incentive for data reporting.",
+      "incentive_note": "Strong on Middle East policy and Iran analysis. Reliable on shipping and Hormuz tracking.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -254,7 +384,7 @@
       "category": "High-Authority Secondary",
       "domains": ["timesofisrael.com", "haaretz.com"],
       "incentive_baseline": "MEDIUM",
-      "incentive_note": "Israeli perspective. Strong on IDF operations and Netanyahu political dynamics. Incentive reflects Israeli domestic audience.",
+      "incentive_note": "Israeli perspective. Strong on IDF operations and Netanyahu political dynamics.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -265,7 +395,7 @@
       "category": "High-Authority Secondary",
       "domains": ["middleeasteye.net"],
       "incentive_baseline": "LOW-MEDIUM",
-      "incentive_note": "Qatar-linked funding. Strong on primary document publication — full text statements. Editorial framing occasionally pro-Iran.",
+      "incentive_note": "Qatar-linked funding. Strong on primary document publication. Editorial framing occasionally pro-Iran.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -276,7 +406,7 @@
       "category": "Specialist Analysis",
       "domains": ["thesoufancenter.org"],
       "incentive_baseline": "LOW-MEDIUM",
-      "incentive_note": "Former intelligence community. Strong on IRGC structure, Iran domestic politics, and proxy network analysis. Analytical framing — not primary sourcing.",
+      "incentive_note": "Former intelligence community. Strong on IRGC structure and Iran domestic politics. Analytical framing — not primary sourcing.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -298,7 +428,7 @@
       "category": "Commercial Data",
       "domains": ["kpler.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Commercial ship and cargo tracking. LOW incentive — data product, not advocacy. Gate 0.1 flag required for data older than 48h.",
+      "incentive_note": "Commercial ship and cargo tracking. Gate 0.1 flag required for data older than 48h.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -309,7 +439,7 @@
       "category": "Commercial Data",
       "domains": ["lloydslist.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Shipping industry authority. Strong on vessel counts, port data, insurance risk. LOW incentive for data reporting.",
+      "incentive_note": "Shipping industry authority. Strong on vessel counts, port data, insurance risk.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -320,7 +450,7 @@
       "category": "High-Authority Secondary",
       "domains": ["cnbc.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Strong on energy markets, oil pricing, and US economic data. LOW incentive for market data reporting.",
+      "incentive_note": "Strong on energy markets, oil pricing, and US economic data.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -331,7 +461,7 @@
       "category": "Watch / Corroboration Required",
       "domains": ["presstv.ir"],
       "incentive_baseline": "HIGH",
-      "incentive_note": "Iranian state English-language broadcaster. Use for IRGC doctrine statements and official Iranian framing only. Never sole source. TQL WARNING mandatory.",
+      "incentive_note": "Iranian state English-language broadcaster. Use for IRGC doctrine statements only. Never sole source. TQL WARNING mandatory.",
       "mandatory_sweep": false,
       "active": true
     },
