@@ -4,18 +4,17 @@
 
 -----
 
-## LIVE UPDATES SINCE LAST EDITION — FILL IN BEFORE OPENING EVENING SESSION
+## INTER-EDITION INTELLIGENCE CHECK — EXECUTE BEFORE STEP 0
 
-> **OPERATOR INSTRUCTION:** Before pasting this file into a new session, manually update this block with anything that has broken since the Edition 018 morning sweep (1221 GMT 11 April). Key things to check:
-> 
-> - GL 134B on OFAC register? → https://ofac.treasury.gov/selected-general-licenses-issued-ofac
-> - Islamabad Day 1 outcome — any joint statement, communique, or departure confirmed?
-> - New IRGC strike on Aramco (especially Yanbu Red Sea terminal)?
-> - Lebanon Washington talks — date/format confirmed or cancelled?
-> - Hormuz transit volume update (Kpler/MarineTraffic)?
-> - Ceasefire violations reported by either side?
-> 
-> If nothing material has broken, delete this block or write “NO MATERIAL UPDATES SINCE 1221 GMT.”
+**Claude: before fetching ARCHITECTURE.md, execute the following live checks in order and record findings in this block. This is mandatory pre-session work, not optional.**
+
+1. Fetch https://ofac.treasury.gov/selected-general-licenses-issued-ofac — confirm whether GL 134B (Russia-related) appears on the register. Record: ISSUED or NOT ISSUED, and timestamp.
+1. Search for Islamabad talks outcome — any joint statement, communique, or delegation departure confirmed since 1221 GMT 11 April. Record: COMMUNIQUE / DEPARTURE / CONTINUING / NO UPDATE.
+1. Search for new IRGC strikes on Saudi Aramco infrastructure — especially Yanbu Red Sea terminal — since 1221 GMT 11 April. Record: NEW STRIKE CONFIRMED / NO NEW STRIKE.
+1. Search for Hormuz transit volume update (Kpler or MarineTraffic) — any material change from Day 3 figure of 2 ships. Record finding with source.
+1. Search for ceasefire violation reports from either US or Iran since 1221 GMT — any formal accusation or military action. Record finding.
+
+Record all five findings here before proceeding to STEP 0. If a finding materially changes a case status tag, note it explicitly — it may trigger a Bypass Override for that case in Edition 019.
 
 -----
 
