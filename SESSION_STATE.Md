@@ -15,6 +15,12 @@
 ## REPOSITORY
 github.com/domyoung101-max/AttolSphere-
 
+### Raw file URLs for direct fetch:
+- ARCHITECTURE.md: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/ARCHITECTURE.md
+- SYSTEM_CHANGE_LOG.md: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/SYSTEM_CHANGE_LOG.md
+- PREDICTION_LOG.json: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/PREDICTION_LOG.json
+- SOURCE_REGISTRY.json: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/SOURCE_REGISTRY.json
+
 ### Current file structure:
 AtollSphere/
 ├── architecture/
@@ -177,15 +183,18 @@ All four patches applied:
 
 ## SESSION INSTRUCTIONS FOR CLAUDE — READ CAREFULLY BEFORE ANY ACTION
 
-### BEFORE BUILDING ANY EDITION:
-1. Fetch ARCHITECTURE.md from github.com/domyoung101-max/AttolSphere- and read it in full
-2. Fetch SYSTEM_CHANGE_LOG.md and apply all active rules
-3. Apply all rules at v1.2.0 — no exceptions, no shortcuts
-4. Confirm PCP Steps 1-6 understood before proceeding
+### STEP 0 — FETCH ARCHITECTURE BEFORE ANYTHING ELSE:
+Fetch these files in order before any other action:
+
+1. Fetch ARCHITECTURE.md from https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/ARCHITECTURE.md — read in full
+2. Fetch SYSTEM_CHANGE_LOG.md from https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/SYSTEM_CHANGE_LOG.md — apply all active rules
+3. Confirm v1.2.0 rules understood before proceeding
+
+Do not build any edition until both files have been fetched and read.
 
 ### TO BUILD AN EDITION — EXACT SEQUENCE MANDATORY:
 
-**Step 1 — Sweep:** Fetch all 18 named core feeds from SOURCE_REGISTRY.json (mandatory_sweep: true) before writing any analytical content. Gate 0.1-0.4 applied to all candidate facts. Fewer than 18 feeds swept = bypass declared with justification and risk.
+**Step 1 — Sweep:** Fetch all 18 named core feeds (mandatory_sweep: true in SOURCE_REGISTRY.json) before writing any analytical content. Gate 0.1-0.4 applied to all candidate facts. Fewer than 18 feeds swept = bypass declared with justification and risk.
 
 **Step 2 — Prediction Log Reconciliation:** Assess every open prediction from this SESSION_STATE before opening any new case. Assign five-state outcome to any closed windows. No silent drops.
 
@@ -203,7 +212,7 @@ All four patches applied:
 **Step 6 — Build PDF:** Using ReportLab. Import from build_core.py and styles.py. Follow visual template in ARCHITECTURE.md Section 13 exactly — navy header bar, teal strip, cover page with edition stats, colour-coded case banners, two-column fact tables, teal hypothesis dividers, sources section with tier in teal and incentive in amber. Output to /mnt/user-data/outputs/ and present the file. Inline prose or markdown does NOT constitute a valid edition and will not be accepted.
 
 ### NAMED FAILURE MODE TO AVOID:
-"Theatre of Rigor" — skeleton appearance of CDIT structure without consistent execution. Every section must pass a quality gate. Pattern-matched summaries are not acceptable.
+Theatre of Rigor — skeleton appearance of CDIT structure without consistent execution. Every section must pass a quality gate. Pattern-matched summaries are not acceptable.
 
 ### OTHER INSTRUCTIONS:
 - Do not re-explain the platform — treat this state file as ground truth
