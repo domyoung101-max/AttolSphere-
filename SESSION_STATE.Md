@@ -26,7 +26,7 @@ AtollSphere/
 │   ├── build_edition.py         # complete
 │   └── styles.py                # complete
 ├── data/
-│   ├── PREDICTION_LOG.json      # v1.2.0 — needs update for Ed015
+│   ├── PREDICTION_LOG.json      # v1.2.0 — updated Ed015
 │   └── SOURCE_REGISTRY.json     # v1.3.0 — 44 sources registered
 ├── outputs/
 │   └── .gitkeep
