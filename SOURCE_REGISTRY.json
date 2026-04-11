@@ -1,7 +1,8 @@
 {
-  "version": "v1.3.0",
-  "last_updated": "Edition 015 Evening Sweep 10 April 2026",
-  "description": "Named source registry for AtollSphere. mandatory_sweep true = core 18 feeds required every sweep. mandatory_sweep false = supplementary feeds used for corroboration and specialist analysis as required.",
+  "version": "v1.4.0",
+  "last_updated": "Edition 018 Morning Sweep 11 April 2026",
+  "description": "Named source registry for AtollSphere. mandatory_sweep true = core 18 feeds required every sweep. mandatory_sweep false = supplementary feeds used for corroboration and specialist analysis as required. v1.4.0 adds upstream_dependency and independent_origination fields to support Gate 0.5 (Source Independence Check, ARCHITECTURE.md v1.2.1 Section 4).",
+  "gate_0_5_note": "upstream_dependency identifies the primary feed a source draws from when reporting on conflict-related facts. independent_origination true = source generates its own primary reporting. false = source aggregates, republishes, or synthesises from named upstream. When multiple sources share the same upstream_dependency, treat as single-source for corroboration purposes regardless of outlet count.",
   "sources": [
     {
       "id": "T1-001",
@@ -11,6 +12,8 @@
       "domains": ["truthsocial.com", "whitehouse.gov"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Domestic victory framing consistent across statements. Gate 0.2 mandatory on all Tier 1 claims.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": true,
       "active": true
     },
@@ -22,6 +25,8 @@
       "domains": ["centcom.mil"],
       "incentive_baseline": "MEDIUM",
       "incentive_note": "Operational claims serve force protection and strategic signalling. Casualty figures independently verifiable.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": true,
       "active": true
     },
@@ -33,6 +38,8 @@
       "domains": ["idf.il", "x.com/IDF"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Strike claims and casualty figures serve domestic and international legitimacy. Gate 0.2 mandatory.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": true,
       "active": true
     },
@@ -44,6 +51,8 @@
       "domains": ["irna.ir", "x.com/Araghchi"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Victory framing and maximalist demand signalling serve domestic hardliner audience. Competing primary always required per Gate 0.2.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": true,
       "active": true
     },
@@ -54,7 +63,9 @@
       "category": "Primary Source",
       "domains": ["x.com", "state.gov"],
       "incentive_baseline": "MEDIUM",
-      "incentive_note": "Leavitt presser, Araghchi X, Ghalibaf X, Netanyahu X. Incentive varies by actor — assess per statement.",
+      "incentive_note": "Leavitt presser, Araghchi X, Ghalibaf X, Netanyahu X. Incentive varies by actor â assess per statement.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": true,
       "active": true
     },
@@ -65,7 +76,9 @@
       "category": "Primary Source",
       "domains": ["imo.org"],
       "incentive_baseline": "LOW",
-      "incentive_note": "UN body. Vessel attack confirmations carry Tier 1 weight. Incident reports are authoritative. LOW incentive — no political agenda.",
+      "incentive_note": "UN body. Vessel attack confirmations carry Tier 1 weight. Incident reports are authoritative. LOW incentive â no political agenda.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
@@ -76,7 +89,9 @@
       "category": "Primary Source",
       "domains": ["home.treasury.gov", "ofac.treas.gov"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Primary source for sanctions announcements, waiver decisions, and General License publications. LOW incentive — regulatory authority. Waiver decisions are Tier 1 events.",
+      "incentive_note": "Primary source for sanctions announcements, waiver decisions, and General License publications. LOW incentive â regulatory authority. Waiver decisions are Tier 1 events.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
@@ -87,7 +102,9 @@
       "category": "Primary Source",
       "domains": ["opec.org"],
       "incentive_baseline": "MEDIUM",
-      "incentive_note": "Primary source for production decisions and quota announcements. MEDIUM incentive — producer bloc cohesion framing. Gate 0.2 mandatory when competing producer statements exist.",
+      "incentive_note": "Primary source for production decisions and quota announcements. MEDIUM incentive â producer bloc cohesion framing. Gate 0.2 mandatory when competing producer statements exist.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
@@ -99,6 +116,9 @@
       "domains": ["reuters.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Wire service. Incentive for accuracy over narrative. Unnamed source claims require Gate 0.3 flag.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Reuters is an originating wire â other outlets citing Reuters are downstream of this source, not independent corroboration.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -109,7 +129,10 @@
       "category": "High-Authority Secondary",
       "domains": ["apnews.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Wire service. Unnamed official sources common — flag per Gate 0.3.",
+      "incentive_note": "Wire service. Unnamed official sources common â flag per Gate 0.3.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "AP is an originating wire â other outlets citing AP are downstream of this source, not independent corroboration.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -121,6 +144,9 @@
       "domains": ["bloomberg.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Strong on shipping, energy, financial data. Commercial tracking data is LOW incentive.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Bloomberg originates own commodity and shipping reporting. However Bloomberg commodity data is frequently cited by downstream outlets â treat downstream Bloomberg citations as single-source.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -132,6 +158,9 @@
       "domains": ["aljazeera.com"],
       "incentive_baseline": "LOW-MEDIUM",
       "incentive_note": "Qatar state-funded. Strong on Middle East reporting. Editorial framing occasionally reflects Gulf state positioning.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Al Jazeera originates own field reporting but also aggregates from Reuters, AP, and AFP. Flag upstream source when Al Jazeera is citing wire rather than own correspondent.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -143,6 +172,9 @@
       "domains": ["nbcnews.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Live blog format. Named official quotes carry Tier 1 weight where attributed.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "NBC originates own reporting but live blogs frequently aggregate AP and Reuters items. Flag upstream source when live blog is citing wire rather than own correspondent.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -154,6 +186,9 @@
       "domains": ["cbsnews.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Live blog format. Strong on US government and military sourcing.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "CBS originates own reporting but live blogs frequently aggregate AP and Reuters items. Flag upstream source when live blog is citing wire rather than own correspondent.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -165,6 +200,8 @@
       "domains": ["npr.org"],
       "incentive_baseline": "LOW",
       "incentive_note": "Public radio. Strong on policy and humanitarian reporting.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": true,
       "active": true
     },
@@ -176,6 +213,9 @@
       "domains": ["marinetraffic.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Real-time AIS vessel tracking. Gate 0.1 flag required for data older than 24h. Note: vessels may spoof or disable AIS in conflict zones.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "MarineTraffic is an originating AIS data source. Kpler, S&P Global, and Lloyd's List all draw from AIS feeds â when multiple commercial trackers report the same vessel movement, confirm whether they are drawing from the same underlying AIS network or independent observation. If shared AIS network: treat as single-source.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -187,6 +227,9 @@
       "domains": ["spglobal.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Shipping and commodity data. Strong on vessel transit counts and cargo data.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "S&P Global originates own vessel tracking but draws from AIS network shared with MarineTraffic and Kpler. Transit count corroboration between S&P Global and Kpler is NOT independent â both are downstream of same AIS infrastructure. Treat as single-source for transit volume facts.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -198,6 +241,9 @@
       "domains": ["bimco.org"],
       "incentive_baseline": "LOW",
       "incentive_note": "International shipowners association. Strong on industry risk assessments and transit recommendations. Represents commercial shipping interests.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "BIMCO originates industry risk assessments based on member reports â independent of AIS data networks. BIMCO transit risk assessments are independent corroboration of commercial tracker data.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -208,7 +254,10 @@
       "category": "Maritime Data",
       "domains": ["windward.ai"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Maritime AI analytics. Strong on vessel behaviour and traffic pattern analysis. Gate 0.1 flag required — data lag varies.",
+      "incentive_note": "Maritime AI analytics. Strong on vessel behaviour and traffic pattern analysis. Gate 0.1 flag required â data lag varies.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Windward draws from AIS and satellite data â partially independent of standard AIS network. Satellite AIS provides independent observation layer where terrestrial AIS is unavailable. Note whether specific Windward data point is AIS-derived or satellite-derived.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -220,6 +269,9 @@
       "domains": ["ft.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Strong on sanctions, Iran nuclear deal economics, Gulf state finance, and energy market analysis. LOW incentive for data reporting.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "FT originates own reporting but frequently cites Reuters, Bloomberg, and Argus Media for energy data. Flag upstream source when FT is citing commercial data rather than own correspondent.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -231,17 +283,22 @@
       "domains": ["wsj.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Strong on US Treasury decisions, sanctions policy, and energy markets. LOW incentive for data reporting. Named sourcing required per Gate 0.3.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
     {
       "id": "T2-014",
-      "name": "IEA — International Energy Agency",
+      "name": "IEA â International Energy Agency",
       "tier": 2,
       "category": "Energy Data",
       "domains": ["iea.org"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Supply disruption data and oil market assessments. Authoritative on global energy flows. LOW incentive — intergovernmental body. Gate 0.1 flag required for data older than one week.",
+      "incentive_note": "Supply disruption data and oil market assessments. Authoritative on global energy flows. LOW incentive â intergovernmental body. Gate 0.1 flag required for data older than one week.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "IEA compiles member state data independently â not downstream of commercial trackers. IEA supply figures are genuinely independent corroboration of Argus, Kpler, or Bloomberg energy data.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -252,7 +309,10 @@
       "category": "Energy Data",
       "domains": ["argusmedia.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Specialist energy pricing and market intelligence. Strong on Iranian crude, refinery damage, and Gulf energy infrastructure. LOW incentive — commercial data product.",
+      "incentive_note": "Specialist energy pricing and market intelligence. Strong on Iranian crude, refinery damage, and Gulf energy infrastructure. LOW incentive â commercial data product.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Argus originates own price assessments and energy reporting independently of Bloomberg and Reuters energy desks. Argus data is independent corroboration of Bloomberg or Reuters energy pricing.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -263,7 +323,9 @@
       "category": "Consumer Data",
       "domains": ["gasprices.aaa.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "US fuel price tracking. Useful for domestic economic impact reporting. LOW incentive — consumer advocacy body.",
+      "incentive_note": "US fuel price tracking. Useful for domestic economic impact reporting. LOW incentive â consumer advocacy body.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
@@ -275,6 +337,8 @@
       "domains": ["tasnimnews.com"],
       "incentive_baseline": "HIGH",
       "incentive_note": "IRGC-linked. All claims require Tier 1/2 corroboration before entering Part 1. TQL WARNING mandatory on fragile facts.",
+      "independent_origination": true,
+      "upstream_dependency": "IRGC command â Tasnim is an originating source for IRGC statements but its independence on factual claims is structurally compromised by institutional affiliation.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -286,6 +350,8 @@
       "domains": ["mehrnews.com"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Iranian state, unattributed. Use for signal detection only. Never sole source for fact table.",
+      "independent_origination": false,
+      "upstream_dependency": "Iranian state media apparatus â shares editorial direction with IRNA. Mehr and IRNA reporting on same event is NOT independent corroboration.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -297,6 +363,8 @@
       "domains": ["wanaen.com"],
       "incentive_baseline": "MEDIUM",
       "incentive_note": "Iranian state-adjacent. Useful for NIORDC and infrastructure damage reports. Cross-verify before use.",
+      "independent_origination": false,
+      "upstream_dependency": "Iranian state media apparatus â frequently republishes from IRNA and IRIB. Treat as downstream of Iranian state media, not independent.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -307,18 +375,23 @@
       "category": "Specialist Analysis",
       "domains": ["houseofsaud.com"],
       "incentive_baseline": "LOW-MEDIUM",
-      "incentive_note": "Specialist conflict analysis. Strong on IRGC command structure and Saudi energy infrastructure. Analytical framing — not primary sourcing.",
+      "incentive_note": "Specialist conflict analysis. Strong on IRGC command structure and Saudi energy infrastructure. Analytical framing â not primary sourcing.",
+      "independent_origination": false,
+      "upstream_dependency": "Downstream synthesis of Argus Media, Bloomberg, Reuters, and satellite imagery sources. House of Saud analysis is independent in framing and interpretation but not in underlying data. Do not treat as corroboration of the data sources it cites.",
       "mandatory_sweep": true,
       "active": true
     },
     {
       "id": "T4-001",
-      "name": "Wikipedia — Iran war timeline",
+      "name": "Wikipedia â Iran war timeline",
       "tier": 4,
       "category": "Editorial Assembly",
       "domains": ["en.wikipedia.org"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Editorial assembly. Useful for chronological verification and forward record. Never sole source. Gate 0.3 carry-forward flag required.",
+      "incentive_note": "Editorial assembly. Forward-looking timeline data is directional corroboration only â see Wikipedia Usage Rule in ARCHITECTURE.md Section 16. Cannot satisfy Gate 0.3 for forward-looking claims. Cannot be load-bearing for hypothesis probability ranges. Gate 0.4 must note editorial assembly risk.",
+      "independent_origination": false,
+      "upstream_dependency": "Editorial synthesis of Reuters, AP, Al Jazeera, and other Tier 1/2 feeds already swept, plus potential forward projection by editors. Wikipedia is downstream of the same sources already in the registry â it is not independent corroboration of those sources.",
+      "gate_0_5_note": "Wikipedia forward-looking entries may reflect editor inference or extrapolation rather than confirmed Tier 1/2 facts. When Wikipedia and a Tier 2 source report the same future event, confirm the Tier 2 source is not itself the Wikipedia upstream before treating as corroboration.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -329,7 +402,9 @@
       "category": "Editorial Assembly",
       "domains": ["acleddata.com"],
       "incentive_baseline": "LOW",
-      "incentive_note": "Conflict data aggregator. Useful for cumulative strike counts and pattern analysis. Lag of several days expected — Gate 0.1 flag required.",
+      "incentive_note": "Conflict data aggregator. Useful for cumulative strike counts and pattern analysis. Lag of several days expected â Gate 0.1 flag required.",
+      "independent_origination": false,
+      "upstream_dependency": "Downstream aggregation of media reports, NGO data, and government sources. ACLED is not independent of the Tier 1/2 sources already swept â it compiles them. Do not treat ACLED cumulative counts as independent corroboration of individual Tier 2 strike reports.",
       "mandatory_sweep": true,
       "active": true
     },
@@ -341,6 +416,8 @@
       "domains": ["x.com/Netanyahu", "pmo.gov.il"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Domestic political survival framing. Lebanon and Iran statements serve coalition management. Gate 0.2 mandatory.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
@@ -352,6 +429,8 @@
       "domains": ["x.com/mb_ghalibaf"],
       "incentive_baseline": "HIGH",
       "incentive_note": "IRGC-origin negotiator. Statements serve hardliner domestic audience and leverage positioning simultaneously. Gate 0.2 mandatory.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
@@ -363,6 +442,8 @@
       "domains": ["al-monitor.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Strong on Middle East policy and Iran analysis. Reliable on shipping and Hormuz tracking.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
@@ -374,6 +455,8 @@
       "domains": ["atlanticcouncil.org"],
       "incentive_baseline": "LOW-MEDIUM",
       "incentive_note": "US-aligned policy advocacy. Strong on sanctions and regulatory analysis. Factually grounded but editorially pro-Western.",
+      "independent_origination": false,
+      "upstream_dependency": "Policy synthesis drawing from Reuters, AP, and US government sources already in registry. Atlantic Council analysis is independent in framing but not in underlying data.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -385,6 +468,9 @@
       "domains": ["timesofisrael.com", "haaretz.com"],
       "incentive_baseline": "MEDIUM",
       "incentive_note": "Israeli perspective. Strong on IDF operations and Netanyahu political dynamics.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Times of Israel and Haaretz originate own Israeli-facing reporting but both also aggregate AP and Reuters. Flag upstream source when citing wire rather than own correspondent. Times of Israel and Haaretz reporting on the same event is NOT independent corroboration â shared Israeli media ecosystem.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -396,6 +482,8 @@
       "domains": ["middleeasteye.net"],
       "incentive_baseline": "LOW-MEDIUM",
       "incentive_note": "Qatar-linked funding. Strong on primary document publication. Editorial framing occasionally pro-Iran.",
+      "independent_origination": true,
+      "upstream_dependency": null,
       "mandatory_sweep": false,
       "active": true
     },
@@ -406,7 +494,9 @@
       "category": "Specialist Analysis",
       "domains": ["thesoufancenter.org"],
       "incentive_baseline": "LOW-MEDIUM",
-      "incentive_note": "Former intelligence community. Strong on IRGC structure and Iran domestic politics. Analytical framing — not primary sourcing.",
+      "incentive_note": "Former intelligence community. Strong on IRGC structure and Iran domestic politics. Analytical framing â not primary sourcing.",
+      "independent_origination": false,
+      "upstream_dependency": "Analytical synthesis of open-source reporting. Soufan Center does not originate primary facts â it interprets them. Do not treat Soufan Center assessments as independent corroboration of the Tier 1/2 sources it analyses.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -417,7 +507,10 @@
       "category": "High-Authority Secondary",
       "domains": ["iranintl.com"],
       "incentive_baseline": "MEDIUM",
-      "incentive_note": "London-based, Saudi-linked funding. Strong on Iranian domestic politics and IRGC reporting. Anti-regime framing — cross-verify claims about internal Iranian dynamics.",
+      "incentive_note": "London-based, Saudi-linked funding. Strong on Iranian domestic politics and IRGC reporting. Anti-regime framing â cross-verify claims about internal Iranian dynamics.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Iran International originates own Persian-language sourcing independently of other registry outlets. Genuine independent corroboration of Iranian domestic reporting from IRNA or Tasnim where editorial lines diverge.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -429,6 +522,9 @@
       "domains": ["kpler.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Commercial ship and cargo tracking. Gate 0.1 flag required for data older than 48h.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Kpler draws from AIS network shared with MarineTraffic and S&P Global. Transit count corroboration between Kpler and other AIS-based trackers is NOT independent â all are downstream of the same AIS infrastructure. Kpler is independent of Bloomberg commodity reporting and Reuters wire â use for cross-check on those sources only.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -440,6 +536,9 @@
       "domains": ["lloydslist.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Shipping industry authority. Strong on vessel counts, port data, insurance risk.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "Lloyd's List Intelligence originates own vessel tracking supplemented by AIS. Partially independent of Kpler and MarineTraffic â Lloyd's List member network provides additional observation layer. Lloyd's List editor assessments (e.g. Richard Meade interviews) are independent analytical framing, not AIS data.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -451,6 +550,9 @@
       "domains": ["cnbc.com"],
       "incentive_baseline": "LOW",
       "incentive_note": "Strong on energy markets, oil pricing, and US economic data.",
+      "independent_origination": true,
+      "upstream_dependency": null,
+      "gate_0_5_note": "CNBC originates own financial reporting but frequently cites Kpler, Bloomberg, and Reuters for commodity data. Flag upstream source when CNBC is republishing commercial tracker data rather than own reporting.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -462,6 +564,8 @@
       "domains": ["presstv.ir"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Iranian state English-language broadcaster. Use for IRGC doctrine statements only. Never sole source. TQL WARNING mandatory.",
+      "independent_origination": false,
+      "upstream_dependency": "Iranian state media apparatus â shares editorial direction with IRNA and IRIB. Press TV, IRNA, IRIB, and Mehr reporting on same event is NOT independent corroboration â all downstream of same editorial structure.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -473,6 +577,8 @@
       "domains": ["irib.ir"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Iranian state broadcaster. Useful for domestic Iranian narrative tracking. All claims require Tier 1/2 corroboration.",
+      "independent_origination": false,
+      "upstream_dependency": "Iranian state media apparatus â shares editorial direction with IRNA. IRIB and IRNA reporting on same event is NOT independent corroboration.",
       "mandatory_sweep": false,
       "active": true
     },
@@ -484,6 +590,8 @@
       "domains": ["farsnews.ir"],
       "incentive_baseline": "HIGH",
       "incentive_note": "Semi-official Iranian. IRGC-adjacent. Useful for Iranian delegation logistics and operational claims. Cross-verify before use.",
+      "independent_origination": false,
+      "upstream_dependency": "IRGC-adjacent editorial apparatus â shares sourcing with Tasnim. Fars and Tasnim reporting on same event is NOT independent corroboration.",
       "mandatory_sweep": false,
       "active": true
     }
