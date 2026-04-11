@@ -22,15 +22,15 @@ AtollSphere/
 │   ├── SYSTEM_CHANGE_LOG.md     # Entry 001 logged
 │   └── CHANGELOG.md             # v1.2.0
 ├── build/
-│   ├── build_core.py            # Pending refactor
-│   ├── build_edition.py         # Pending refactor
-│   └── styles.py                # Pending refactor
+│   ├── build_core.py            # complete
+│   ├── build_edition.py         # complete
+│   └── styles.py                # complete
 ├── data/
 │   ├── PREDICTION_LOG.json      # v1.2.0 — needs update for Ed015
 │   └── SOURCE_REGISTRY.json     # v1.3.0 — 44 sources registered
 ├── outputs/
 │   └── .gitkeep
-└── README.md                    # Pending creation
+└── README.md                    # complete
 
 ---
 
