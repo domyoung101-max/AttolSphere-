@@ -153,6 +153,13 @@ def fact_table(rows, styles):
     """Two-column fact/source table.
 
     rows = [(fact_text, source_attribution), ...]
+        or [(fact_text, source_attribution, upstream_dependency), ...]
+
+    upstream_dependency (Gate 0.5 field):
+        str  – rendered verbatim as "Upstream: <value>"
+        None – rendered as "Upstream: INDEPENDENT"
+        Omit the third element entirely to suppress the upstream line
+        (backward-compatible with 2-tuple callers).
     """
     header = [
         Paragraph('<b>FACT</b>',
@@ -163,12 +170,26 @@ def fact_table(rows, styles):
                            fontSize=7, textColor=WHITE)),
     ]
     table_rows = [header]
-    for fact, source in rows:
+    for row in rows:
+        fact = row[0]
+        source = row[1]
+        # Gate 0.5 upstream flag — rendered only when a third element is present
+        if len(row) >= 3:
+            ud = row[2]
+            upstream_label = 'INDEPENDENT' if ud is None else ud
+            source_text = (
+                source
+                + '<br/><font size="7">Upstream: '
+                + upstream_label
+                + '</font>'
+            )
+        else:
+            source_text = source
         table_rows.append([
             Paragraph(fact,
                 ParagraphStyle('fb', fontName='Helvetica',
                                fontSize=7.5, leading=10, textColor=CHARCOAL)),
-            Paragraph(source,
+            Paragraph(source_text,
                 ParagraphStyle('sb', fontName='Helvetica-Oblique',
                                fontSize=7, leading=9.5, textColor=MID_GREY)),
         ])
