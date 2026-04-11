@@ -23,8 +23,8 @@ Record all five findings here before proceeding to STEP 0. If a finding material
 - Product: AtollSphere — GSINT intelligence brief platform
 - Parent: LS AI Systems
 - Operator: UK-based. BST (UTC+1). GMT primary for all timestamps.
-- Architecture version: v1.2.0
-- Build: build_1.1.0.py v1.2.0
+- Architecture version: v1.2.1
+- Build: build_core.py / build_edition.py / build_master.py / styles.py
 
 -----
 
@@ -38,25 +38,27 @@ github.com/domyoung101-max/AttolSphere-
 - SYSTEM_CHANGE_LOG.md: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/SYSTEM_CHANGE_LOG.md
 - PREDICTION_LOG.json: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/PREDICTION_LOG.json
 - SOURCE_REGISTRY.json: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/SOURCE_REGISTRY.json
+- build_core.py: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/build_core.py
+- build_edition.py: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/build_edition.py
+- build_master.py: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/build_master.py
+- styles.py: https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/styles.py
 
-### Current file structure:
+### Current file structure (confirmed from repository 11 April 2026):
 
 ```
-AtollSphere/
-├── architecture/
-│   ├── ARCHITECTURE.md          # v1.2.0
-│   ├── SYSTEM_CHANGE_LOG.md     # Entry 001 logged
-│   └── CHANGELOG.md             # v1.2.0
-├── build/
-│   ├── build_core.py            # Complete — includes get_source_info() function
-│   ├── build_edition.py         # Complete
-│   └── styles.py                # Complete
-├── data/
-│   ├── PREDICTION_LOG.json      # v1.2.0 — update with Ed018 outcomes
-│   └── SOURCE_REGISTRY.json     # v1.3.0 — 44 sources registered
-├── outputs/
-│   └── .gitkeep
-└── README.md                    # Complete
+AttolSphere-/
+├── ARCHITECTURE.md              # v1.2.1
+├── CHANGELOG.md
+├── PREDICTION_LOG.json          # v1.4.0 — current through Edition 018
+├── README.md
+├── SESSION_START.md
+├── SESSION_STATE.md             # active session state
+├── SOURCE_REGISTRY.json         # v1.4.0 — 44 sources, Gate 0.5 fields added
+├── SYSTEM_CHANGE_LOG.md         # Entries 001, AI-001, AI-002, AI-003, AI-004
+├── build_core.py                # includes get_source_info() function
+├── build_edition.py
+├── build_master.py
+└── styles.py
 ```
 
 -----
@@ -134,9 +136,13 @@ AtollSphere/
 
 ## SYSTEM CHANGE LOG — ACTIVE RULES
 
-|Entry|Rule                                                                                                                                                                    |In Force From|
-|-----|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
-|001  |Named-party statement predictions require incentive analysis before C3 satisfied. No structural incentive = confidence ceiling LOW-MEDIUM regardless of prior behaviour.|Edition 014  |
+|Entry |Type                  |Rule Summary                                                                                                                                                                                                                                                                                                                                                                                                            |In Force From|
+|------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------|
+|001   |PMM-TRIGGERED         |Named-party statement predictions require incentive analysis before C3 satisfied. No structural incentive = confidence ceiling LOW-MEDIUM regardless of prior behaviour.                                                                                                                                                                                                                                                |Edition 014  |
+|AI-001|ANALYTICAL IMPROVEMENT|Case B standing enhancements — AFC steelman (4 elements), H-B2 fully specified, H6 second-order dynamics, explicit disconfirmation thresholds (~54–68 ships/day), confidence justification mandatory in Part 2 INFERENCE.                                                                                                                                                                                               |Edition 018  |
+|AI-002|ANALYTICAL IMPROVEMENT|Wikipedia Tier 4 usage rule — directional corroboration only, cannot be load-bearing, cannot satisfy Gate 0.3 for forward-looking claims. Case A corroboration split — Leg 1 (Tier 1/2 only) and Leg 2 (Tier 4 directional) mandatory in Part 3. Tier 4 dependency test mandatory as fourth TQL item.                                                                                                                   |Edition 019  |
+|AI-003|ANALYTICAL IMPROVEMENT|Gate 0.5 (source independence), H1 saturation check (3+ cases = explicit question required), deferred outcome disconfirmation rule (WATCH/PARTIAL/AMBIGUOUS must state CONTRADICTED condition), PCP Step 1.5 New Signal Check, Part 2 claim-type labelling [FACT]/[INFERENCE]/[PREDICTION], calibration audit at Edition 025, named failure modes: Claim-Type Conflation, Source Amplification, Escape-Hatch Assignment.|Edition 019  |
+|AI-004|ANALYTICAL IMPROVEMENT|SYSTEM_CHANGE_LOG expanded to include Entry Type B (Analytical Improvement). All platform rule changes must be logged before considered in force.                                                                                                                                                                                                                                                                       |Edition 019  |
 
 -----
 
@@ -144,32 +150,49 @@ AtollSphere/
 
 ### Review 001 — ChatGPT analysis of Case B (Hormuz), received 11 April 2026
 
-Six enhancement recommendations assessed. Decisions recorded permanently below.
+|Point|Recommendation                                                             |Decision                                                                      |Rationale                                                                                     |
+|-----|---------------------------------------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+|1    |Reclassify H1 from “incentive mismatch” to “strategic compliance”          |REJECTED                                                                      |Collapses the analytical tension H1 is designed to expose. Do not apply in any future edition.|
+|2    |Strengthen AFC — explicitly construct best-case argument for full reopening|ACCEPTED — incorporated Ed018                                                 |Applied in full. Standing improvement.                                                        |
+|3    |Expand H-B2 — fully specified                                              |ACCEPTED — incorporated Ed018                                                 |H-B2 analytically competitive with H-B1. Standing improvement.                                |
+|4    |Add second-order effects to H6                                             |PARTIAL ACCEPT — insurance/price spike Ed018; long-term feedback loop deferred|Applied. Long-term loop = post-ceasefire flag only.                                           |
+|5    |Add explicit disconfirmation thresholds                                    |PARTIAL ACCEPT — thresholds yes, 30 ships figure rejected                     |Threshold: ~54–68 ships/day (analytically derived).                                           |
+|6    |Add explicit confidence justification narrative                            |ACCEPTED — incorporated Ed018                                                 |Mandatory from Ed018.                                                                         |
 
-|Point|Recommendation                                                                                                                                                                           |Decision                                                                                   |Rationale                                                                                                                                                                                                                                                                                                                                                                                   |
-|-----|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|1    |Reclassify H1 from “incentive mismatch” to “strategic compliance”                                                                                                                        |REJECTED                                                                                   |H1 is defined as: stated motive vs observable outcome. Iran claiming compliance while functionally maintaining closure is precisely an incentive mismatch — the narrative diverges from the observable outcome. Reclassifying as “strategic compliance” collapses the analytical tension H1 is designed to expose and renders the heuristic less useful. Do not apply in any future edition.|
-|2    |Strengthen AFC — explicitly construct best-case argument for full reopening including sanctions relief incentive, market stabilisation motive, naval enforcement risk, export volume loss|ACCEPTED — incorporated Ed018                                                              |Applied in full in Ed018 Case B Part 2 AFC section. Standing improvement for Case B.                                                                                                                                                                                                                                                                                                        |
-|3    |Expand H-B2 — explicitly link to Islamabad interim transit guarantees, phased reopening, internal Iranian economic constraints                                                           |ACCEPTED — incorporated Ed018                                                              |H-B2 fully specified in Ed018 — Islamabad trigger, phased reopening mechanism, internal economic constraints. Analytically competitive with H-B1. Standing improvement.                                                                                                                                                                                                                     |
-|4    |Add second-order effects to H6 — insurance market premiums, price spike pressure, feedback loop weakening Iran’s economic position                                                       |PARTIAL ACCEPT — insurance/price spike incorporated Ed018; long-term feedback loop deferred|Applied in Ed018 Case B Part 2 H6 section. Long-term feedback loop flagged as post-ceasefire analytical flag, not active finding.                                                                                                                                                                                                                                                           |
-|5    |Add explicit disconfirmation thresholds — e.g. >30 ships/day triggers downgrade                                                                                                          |PARTIAL ACCEPT — thresholds yes, 30 ships figure rejected                                  |Applied in Ed018 Case B Part 5. Threshold set at ~40–50% of pre-war baseline (~54–68 ships/day) — analytically derived, not arbitrary.                                                                                                                                                                                                                                                      |
-|6    |Add explicit confidence justification narrative — why HIGH is warranted                                                                                                                  |ACCEPTED — incorporated Ed018                                                              |Applied in Ed018 Case B Part 2 INFERENCE. Format: “HIGH confidence warranted: dominant hypothesis supported by [named Tier 1/2 sources]; no direct disconfirming evidence; alternative hypotheses lack supporting signals as of [timestamp].”                                                                                                                                               |
+### Review 002 — Red-team critique of Edition 018 brief, received 11 April 2026
+
+Ten-point critique. Four structural changes implemented across all branches. See SYSTEM_CHANGE_LOG entries AI-002, AI-003, AI-004. Key actioned findings: Gate 0.5, H1 saturation check, deferred outcome disconfirmation rule, New Signal Check, claim-type labelling, calibration audit, Wikipedia constraint, AIS cluster single-source, Iranian state media cluster single-source.
 
 -----
 
 ## CASE B STANDING ENHANCEMENTS — IN FORCE FROM EDITION 018
 
-These apply to every future edition of Case B until superseded or the case closes.
+**AFC:** Steelman for full reopening must include: (1) Iranian sanctions relief incentive; (2) oil market stabilisation interest; (3) US/coalition naval enforcement risk; (4) Iran’s own export volume loss. Present as coherent rational pathway.
 
-**AFC enhancement:** The steelman for full Hormuz reopening must include all four elements: (1) Iranian incentive to secure rapid sanctions relief; (2) Iranian interest in stabilising global oil markets to avoid triggering emergency diplomacy against Tehran; (3) risk of provoking US or coalition naval enforcement if toll model becomes aggressive; (4) Iran’s own export volume loss under restricted access. Present reopening as a coherent rational pathway, not merely a weaker alternative.
+**H-B2:** Fully specified — Islamabad interim transit guarantee as trigger; phased reopening mechanism; internal Iranian economic constraints as driver. Analytically competitive with H-B1.
 
-**H-B2 enhancement:** Hypothesis must be fully specified — not a secondary note. Include: Islamabad interim transit guarantee as trigger; phased reopening mechanism (escorted flows or capped toll regime); internal Iranian economic constraints as a driver pushing toward this outcome. H-B2 should be analytically competitive with H-B1, not subordinate to it.
+**H6:** First-order (Hormuz control → sanctions leverage) AND second-order (insurance premiums, price spike diplomatic pressure). Long-term feedback loop = post-ceasefire flag only.
 
-**H6 enhancement:** Include first-order linkage (Hormuz control → sanctions relief leverage) AND second-order dynamics: insurance premium increase reducing Iran’s own export efficiency; global price spike accelerating diplomatic pressure against Iran. Note long-term feedback loop (prolonged restriction weakening Iran’s economic position) as a post-ceasefire analytical flag, not an active finding.
+**Disconfirmation thresholds:** Explicit H-B1 downgrade conditions — transit >~54–68 ships/day; OR formal written transit protocol at Islamabad; OR confirmed unrestricted passage without toll enforcement.
 
-**Disconfirmation thresholds:** Part 5 disconfirmation table for Case B must include explicit trigger conditions for downgrading H-B1. Minimum threshold for framing revision: verified transit volume exceeding ~40–50% of pre-war baseline (~54–68 ships/day); OR formal written transit protocol agreed at Islamabad; OR confirmed evidence of unrestricted passage without toll enforcement.
+**Confidence justification:** Part 2 INFERENCE must include one explicit line naming supporting sources, absence of disconfirming evidence, and timestamp.
 
-**Confidence justification:** Part 2 INFERENCE section must include one explicit line justifying the confidence level assigned. Format: “HIGH confidence warranted: dominant hypothesis supported by [named Tier 1/2 sources]; no direct disconfirming evidence present at sweep; alternative hypotheses [H-B2/H-B3] lack supporting signals as of [timestamp].”
+-----
+
+## CASE A STANDING ENHANCEMENTS — IN FORCE FROM EDITION 019
+
+**Part 3 — Corroboration split (mandatory):**
+
+- Leg 1 — Tier 1/2 process signals only. Must independently sustain stated probability range.
+- Leg 2 — Tier 4 directional only. Not load-bearing. If Leg 1 cannot sustain range without Leg 2, reduce range.
+
+**Part 4 — Tier 4 dependency test (mandatory fourth TQL item):** “H-A2 stripped of Wikipedia forward record — does Tier 1/2 evidence alone support the stated probability range? [Yes/No + one sentence].” If No: revise range downward.
+
+-----
+
+## WIKIPEDIA USAGE RULE — IN FORCE FROM EDITION 019
+
+Formalised in ARCHITECTURE.md v1.2.1 Section 16. Directional corroboration only. Cannot be load-bearing for hypothesis probability ranges. Cannot satisfy Gate 0.3 for forward-looking claims. Cannot justify a confidence level Tier 1/2 evidence alone would not support. Tier 4 dependency test mandatory in TQL Part 4. Gate 0.4 must note editorial assembly risk.
 
 -----
 
@@ -177,174 +200,148 @@ These apply to every future edition of Case B until superseded or the case close
 
 ### Edition 018 — New Findings (Morning Sweep 1221 GMT 11 April)
 
-- **PRED-017-E CONFIRMED — CRITICAL:** Abqaiq processing facility struck by IRGC drones 8 April 2026 — same day as ceasefire announcement. ESA Copernicus satellite imagery confirmed smoke and fire. Abqaiq processes ~7% of global oil supply / 5.7M bpd. IRGC now controls both Hormuz (primary) and East-West Pipeline/Abqaiq (bypass). Saudi Arabia has no functioning uninhibited export route.
-- **GL 134A lapsed 1201 EDT 11 April confirmed.** GL 134B not on OFAC register at 1221 GMT sweep. GL U (Iranian oil) active through 19 April — 8 days remaining. PRED-008-D 15 April trigger active.
-- **Islamabad talks commenced 11 April.** Proximity format (two rooms, Pakistani FM Dar and Army Chief Munir shuttling). Both delegations arrived at Serena Hotel. Vance met Sharif. Iranian delegation (71 personnel) arrived. No communique at sweep. Iran SNSC: talks could continue “up to 15 days.”
-- **Hormuz Day 3:** 2 ships — lowest transit volume since ceasefire. 600+ large ocean-going vessels stranded. IRGC mine hazard confirmed. Toll model: $2M/tanker, yuan/crypto. Kpler: volumes fell further post-ceasefire announcement.
-- **Lebanon:** 1,953+ killed, 6,303 wounded. Strikes continued 11 April — 13 Lebanese State Security forces killed Nabatieh 10 April. Hezbollah struck Ashdod naval base. Israel-Lebanon Washington talks confirmed — Lebanese senior official: “preparatory, not a negotiation.” Lebanon has not appointed representative.
-- **Cross-case H1 pattern confirmed:** Iranian regime statements consistently performative while observable outcomes diverge (Hormuz toll persists, Abqaiq struck on ceasefire day, Ghalibaf arrived despite stated blocking conditions). H1 is the dominant analytical heuristic across all five active cases.
-- **New forward flags:** PRED-018-B (Hormuz <15 ships/day through 15 April) and PRED-018-E (Yanbu Red Sea terminal strike before 22 April).
+- **PRED-017-E CONFIRMED — CRITICAL:** Abqaiq struck 8 April. ESA satellite imagery confirmed. IRGC controls both Hormuz and East-West Pipeline/Abqaiq. Saudi Arabia has no functioning uninhibited export route.
+- **GL 134A lapsed 1201 EDT 11 April confirmed.** GL 134B not on OFAC register at sweep. GL U active through 19 April.
+- **Islamabad talks commenced 11 April.** Proximity format. Both delegations arrived. No communique at sweep.
+- **Hormuz Day 3:** 2 ships. 600+ large vessels stranded. IRGC mine hazard confirmed. Toll model: $2M/tanker.
+- **Lebanon:** 1,953+ killed. Strikes continued 11 April. 13 Lebanese State Security forces killed 10 April. Washington talks confirmed — preliminary framing only.
+- **Cross-case H1 pattern:** Iranian regime statements consistently performative across all five cases.
+- **New forward flags:** PRED-018-B and PRED-018-E.
 
-### Edition 017 — Key Findings (Morning Sweep 11 April)
+### Edition 017 — Key Findings
 
-- Islamabad Day 1 active — proximity format confirmed. Highest-level US-Iran engagement since 1979.
-- US delegation: Vance (lead), Witkoff, Kushner. Iranian: Ghalibaf, Araghchi, Hemmati (Central Bank), Ahmadian (SNSC). 71 personnel.
+- Islamabad Day 1 active. US: Vance, Witkoff, Kushner. Iran: Ghalibaf, Araghchi, Hemmati, Ahmadian. 71 personnel.
 - Ghalibaf: “We have goodwill but we do not trust.” Preconditions assessed performative.
 - GL 134A expired 1201 EDT 11 April. No GL 134B confirmed.
 - Hormuz: 5–9 transits/day vs 135 pre-war. Toll model operational.
-- SESSION_STATE CORRECTION (Ed016): IRGC attack 7–8 April was coordinated campaign against 6+ Aramco facilities — Petroline (−700K b/d), Manifa (−300K b/d), Satorp, Ras Tanura, Samref, Riyadh refineries, Juaymah.
-- Lebanon: 1,953+ killed. 182 killed 8 April (subsequently revised to 303+). Israel rejects Lebanon ceasefire. Washington talks 15 April — disarmament framing only.
-- Trump asked Netanyahu to scale back Lebanon bombardment — no operational change confirmed.
+- SESSION_STATE CORRECTION (Ed016): IRGC attack 7–8 April was coordinated campaign — Petroline (−700K b/d), Manifa (−300K b/d), Satorp, Ras Tanura, Samref, Riyadh refineries, Juaymah.
+- Lebanon: 1,953+ killed. 303+ killed 8 April single day record.
 
 ### Edition 016 — Key Findings
 
-- GL 134A lapse anticipated. Extension agreed in principle (Bessent-Trump 9 April per Reuters) but never formalised.
-- IRGC attack on East-West Pipeline (Petroline) and broader Aramco infrastructure 7–8 April.
+- GL 134A lapse anticipated. Extension agreed in principle but never formalised.
 - Iran controls both Hormuz and Petroline simultaneously — structural leverage maximum.
-- Mine hazard: Iran reportedly unable to reopen Hormuz fully due to IRGC-laid mines.
 - OFAC staffing constraint: licensing division at 22 of 40 staff.
-- Israel-Lebanon direct talks announced for Washington 15 April.
 
 ### Edition 015 — Key Findings
 
-- PRED-014-A CONFIRMED — ceasefire extended, talks continued through May/June per Wikipedia forward record.
-- Islamabad session one produced ceasefire extension as sole output.
-- Hemmati (Central Bank Governor) in delegation — sanctions relief on economic track.
-- Soufan Center: Iran likely to revive 3.67% uranium downblending offer (Oman 2025).
-- Wikipedia: Witkoff subsequently demanded full enrichment facility dismantlement.
+- PRED-014-A CONFIRMED — ceasefire extended, talks continued May/June per Wikipedia forward record.
+- Hemmati in delegation — sanctions relief on economic track.
 - Downblending vs dismantlement is the single binary determining whether permanent agreement is possible.
 
 ### Edition 014 — Key Findings
 
-- Ghalibaf set two preconditions before Islamabad: Lebanon ceasefire AND asset release (~$7bn frozen assets).
-- Hormuz IRGC franchise model confirmed operational: 15/day cap, Larak Island corridor, IRGC approval required, fees up to $2M/tanker.
-- Mojtaba Khamenei declared Iran won the war on 40th mourning day.
-- Hajj-Hormuz convergence: first Hajj charters 18 April, ceasefire expires 22 April, zero Iranian pilgrims in Saudi Arabia — IRGC faces no domestic political cost from Hormuz disruption during Hajj.
+- Ghalibaf preconditions: Lebanon ceasefire AND asset release (~$7bn frozen).
+- Hormuz franchise confirmed: 15/day cap, Larak corridor, IRGC approval, fees up to $2M/tanker.
+- Hajj-Hormuz convergence: ceasefire expires 22 April, zero Iranian pilgrims in Saudi Arabia — no IRGC domestic cost.
 
 -----
 
-## NEXT EDITION TRIGGERS — PRIORITY ORDER FOR EDITION 019 EVENING SWEEP
+## NEXT EDITION TRIGGERS — PRIORITY ORDER FOR EDITION 019
 
-|Timing          |Trigger                                                                |Action                                                                                                             |
-|----------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-|IMMEDIATE       |GL 134B on OFAC register                                               |Monitor https://ofac.treasury.gov/selected-general-licenses-issued-ofac — resolve PRED-008-D                       |
-|EVENING 11 APRIL|Islamabad Day 1 outcome — any joint statement, communique, or departure|PRED-017-A trigger. Watch for Pakistani FM Dar or White House statement.                                           |
-|EVENING 11 APRIL|New IRGC Aramco strike — especially Yanbu                              |PRED-018-E activation. Yanbu = simultaneous closure of all Saudi export routes. CRITICAL escalation brief required.|
-|EVENING 11 APRIL|Hormuz transit volume update                                           |PRED-018-B monitoring. <15/day = continuing to confirm; >15/day for 3 days = contradicted.                         |
-|12–14 APRIL     |Islamabad Day 2+ format and any communique                             |PRED-017-A window closes 14 April.                                                                                 |
-|15 APRIL        |Israel-Lebanon Washington talks                                        |PRED-017-C trigger. Strike pause = DEVELOPING; continued strikes = ESCALATING maintained.                          |
-|15 APRIL        |GL 134B trigger                                                        |No GL 134B by 15 April = PRED-008-D ESCALATING CONFIRMED.                                                          |
-|19 APRIL        |GL U (Iranian oil) expiry                                              |Second waiver window closes.                                                                                       |
-|22 APRIL        |Ceasefire expiry                                                       |PRED-015-A resolution.                                                                                             |
-|WATCH           |Oman formal Hormuz transit coordination                                |Upgrade PRED-002-B to DEVELOPING.                                                                                  |
-|WATCH           |Abqaiq repair status — any Aramco official disclosure                  |Resolve Case E H-E1 or H-E3.                                                                                       |
-|WATCH           |Pumping station repair timeline (Petroline)                            |Case E H-E3 or H-E1 resolution.                                                                                    |
+|Timing          |Trigger                                  |Action                                                  |
+|----------------|-----------------------------------------|--------------------------------------------------------|
+|IMMEDIATE       |GL 134B on OFAC register                 |Resolve PRED-008-D                                      |
+|EVENING 11 APRIL|Islamabad Day 1 outcome                  |PRED-017-A trigger                                      |
+|EVENING 11 APRIL|New IRGC Aramco strike — especially Yanbu|PRED-018-E activation                                   |
+|EVENING 11 APRIL|Hormuz transit volume update             |PRED-018-B monitoring                                   |
+|12–14 APRIL     |Islamabad Day 2+ / communique            |PRED-017-A window closes 14 April                       |
+|15 APRIL        |Israel-Lebanon Washington talks          |PRED-017-C trigger                                      |
+|15 APRIL        |GL 134B trigger                          |No GL 134B by 15 April = PRED-008-D ESCALATING CONFIRMED|
+|19 APRIL        |GL U expiry                              |Second waiver window closes                             |
+|22 APRIL        |Ceasefire expiry                         |PRED-015-A resolution                                   |
+|WATCH           |Oman formal Hormuz coordination          |Upgrade PRED-002-B to DEVELOPING                        |
+|WATCH           |Abqaiq repair status                     |Resolve Case E H-E1 or H-E3                             |
 
 -----
 
 ## SOURCE REGISTRY
 
-- SOURCE_REGISTRY.json v1.3.0 — 44 sources registered
+- SOURCE_REGISTRY.json v1.4.0 — 44 sources registered
 - 18 core mandatory sweep feeds (mandatory_sweep: true)
-- 26 supplementary feeds covering maritime, financial, specialist analysis, Iranian state media
-- get_source_info() function in build_core.py — auto-classifies tier, category, incentive baseline by domain
+- 26 supplementary feeds
+- Two new Gate 0.5 fields per entry: upstream_dependency and independent_origination
+- get_source_info() function in build_core.py — auto-classifies tier, category, incentive baseline, upstream dependency by domain
+
+**Critical Gate 0.5 findings:**
+
+- AIS cluster (MarineTraffic, Kpler, S&P Global, Windward) — shared AIS network — single-source for transit volume
+- Iranian state media cluster (IRNA, IRIB, Mehr, WANA, Press TV, Fars) — shared editorial apparatus — single-source
+- Reuters and AP are originating wires — all citing outlets are downstream, not independent
+- Wikipedia and ACLED are downstream of same Tier 1/2 feeds already swept
 
 -----
 
-## ARCHITECTURE PATCHES — v1.2.0 APPLIED / v1.2.1 PENDING
+## ARCHITECTURE PATCHES
 
-### v1.2.0 — All four patches applied:
+### v1.2.1 — COMMITTED 11 April 2026
 
-- C3 updated: silence, partial compliance, strategic ambiguity must be pre-assigned to named five-state outcome before window opens.
-- Bypass Override Protocol: Tier 1/2 fact materially changing a case status tag resets bypass ceiling for that case only, that edition only. Maximum one override per case per edition.
-- status_history mandatory in prediction log schema — appended never overwritten.
-- SYSTEM_CHANGE_LOG.md created, referenced in Section 17 — all PMM rule changes logged permanently.
+Gate 0.5, claim-type labelling, Leg 1/Leg 2 split, Tier 4 dependency test, deferred outcome disconfirmation rule, H1 saturation check, calibration audit at Edition 025, PCP Step 1.5, Wikipedia usage rule (Sections 3 and 16), SYSTEM_CHANGE_LOG Entry Type B, four new named failure modes, PDF visual template updated, architecture change control section added.
 
-### v1.2.1 — PENDING (formalise via Claude Code):
-
-- Wikipedia usage rule: forward-looking timeline data is directional corroboration only. Cannot be load-bearing for hypothesis probability ranges or confidence levels. Cannot satisfy Gate 0.3 for forward-looking claims. Tier 4 dependency test mandatory in TQL Part 4 for any finding relying on Wikipedia forward data. Gate 0.4 must note editorial assembly risk. Full rule text in SESSION INSTRUCTIONS above.
-- Case A corroboration split: H-A2 must separate Tier 1/2 process signals (Leg 1) from Tier 4 directional corroboration (Leg 2) in Part 3. Tier 4 dependency test mandatory as fourth TQL item. Full rule text in SESSION INSTRUCTIONS above.
+### No further patches pending.
 
 -----
 
 ## OPEN BUILD TASKS
 
 - [ ] Upload logo files to repository — atollsphere_logo_v2.png and ls_logo_v2.png
-- [ ] Claude Code: patch build_core.py to include logos in PDF header and cover
-- [ ] Update PREDICTION_LOG.json with Edition 017 and 018 outcomes
-- [ ] Backfill status_history for Editions 001-012 when log data available
-- [ ] Claude Code: formalise ARCHITECTURE.md v1.2.1 — Wikipedia usage rule and Case A corroboration split (full rule text in SESSION INSTRUCTIONS)
+- [ ] Claude Code: patch build_core.py — logos in PDF header and cover
+- [ ] Claude Code: patch build_core.py — update get_source_info() to read upstream_dependency and independent_origination from SOURCE_REGISTRY.json v1.4.0
+- [ ] Claude Code: patch build_core.py — Gate 0.5 upstream flag in fact table source attribution column
+- [ ] Claude Code: patch build_core.py — Leg 1/Leg 2 sub-row rendering in hypothesis tables
+- [ ] Claude Code: patch build_core.py — domain quality assessment as distinct styled block at close of Part 2
+- [ ] Claude Code: patch build_core.py — upstream_dependency in sources section (grey italic)
+- [ ] Backfill status_history and confidence_at_prediction for Editions 001-012 when log data available
 
 -----
 
 ## SESSION INSTRUCTIONS FOR CLAUDE — READ CAREFULLY BEFORE ANY ACTION
 
-### STEP 0 — FETCH ARCHITECTURE BEFORE ANYTHING ELSE:
+### STEP 0 — FETCH ARCHITECTURE AND BUILD FILES BEFORE ANYTHING ELSE:
 
 Fetch these files in order before any other action:
 
 1. Fetch ARCHITECTURE.md from https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/ARCHITECTURE.md — read in full
 1. Fetch SYSTEM_CHANGE_LOG.md from https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/SYSTEM_CHANGE_LOG.md — apply all active rules
-1. Confirm v1.2.0 rules understood before proceeding
+1. Fetch build_core.py from https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/build_core.py — read before building any PDF
+1. Fetch styles.py from https://raw.githubusercontent.com/domyoung101-max/AttolSphere-/main/styles.py — read before building any PDF
+1. Confirm v1.2.1 rules understood before proceeding
 
-Do not build any edition until both files have been fetched and read.
+Do not build any edition until all five files have been fetched and read.
 
 ### TO BUILD AN EDITION — EXACT SEQUENCE MANDATORY:
 
-**Step 1 — Sweep:** Fetch all 18 named core feeds (mandatory_sweep: true in SOURCE_REGISTRY.json) before writing any analytical content. Gate 0.1-0.4 applied to all candidate facts. Fewer than 18 feeds swept = bypass declared with justification and risk.
+**Step 1 — Sweep:** Fetch all 18 named core feeds (mandatory_sweep: true in SOURCE_REGISTRY.json). Gate 0.1-0.5 applied to all candidate facts. Gate 0.5 upstream dependency checked against SOURCE_REGISTRY.json v1.4.0 before treating any fact as multiply-corroborated. Fewer than 18 feeds swept = bypass declared.
 
-**Step 2 — Prediction Log Reconciliation:** Assess every open prediction from this SESSION_STATE before opening any new case. Assign five-state outcome to any closed windows. No silent drops.
+**Step 1.5 — New Signal Check:** Mandatory paragraph before prediction reconciliation: “Is there any development in this sweep that does not fit any existing case and cannot be addressed within one?” If yes: assess against new case threshold. Cannot be bypassed.
 
-**Step 3 — Case Continuity Check:** For each carried-forward case confirm: (a) status tag still accurate, (b) hypothesis set overtaken, (c) Forward Flag window expired.
+**Step 2 — Prediction Log Reconciliation:** Every open prediction assessed. Five-state outcome assigned to closed windows. WATCH/PARTIAL/AMBIGUOUS assignments must state what evidence would have produced CONTRADICTED. No silent drops.
+
+**Step 3 — Case Continuity Check:** (a) status tag still accurate? (b) hypothesis set overtaken? (c) Forward Flag window expired?
 
 **Step 4 — Full CDIT on every case — NO SILENT BYPASSES:**
 
-- Part 1: Fact table with Gate 0.1-0.4 checks on every row. Two columns: fact / source attribution with tier stated.
-- Part 2: Heuristics H1-H6 applied by name. AFC closing element mandatory. Ends with INFERENCE and domain quality assessment.
-- Part 3: Minimum two hypotheses with probability ranges. dominant_hyp_prob_upper below 60% = confidence capped at MEDIUM.
-- Part 4: TQL check — (1) assumptions, (2) fragile fact with tier, (3) high-impact uncertainty. Tier 3/4 fragile fact raises TQL WARNING.
-- Part 5: Disconfirmation table — CONFIRMS / CONTRADICTS pairs. Gate 5 Framing Revision Trigger required.
+- Part 1: Fact table with Gate 0.1-0.5 on every row. Source attribution column includes tier AND upstream dependency. “Upstream: [named feed or INDEPENDENT].”
+- Part 2: Each heuristic finding opens with [FACT], [INFERENCE], or [PREDICTION]. If H1 fires on 3+ cases this edition, each H1-affected Part 2 must ask: “Is H1 the correct heuristic here, or is the framework pattern-matching?” AFC mandatory — label its own claims. INFERENCE paragraph distinguishes factual from inferential. Domain quality assessment = distinct labelled block, not embedded prose.
+- Part 3: Minimum 2 hypotheses. dominant_hyp_prob_upper <60% = MEDIUM cap. Where Tier 4 data involved: Leg 1 (Tier 1/2 only, must independently sustain range) and Leg 2 (Tier 4 directional only) mandatory.
+- Part 4: (1) assumptions; (2) fragile fact with tier; (3) high-impact uncertainty; (4) Tier 4 dependency test if any hypothesis relies on Tier 4 data. WATCH/PARTIAL/AMBIGUOUS must state CONTRADICTED condition.
+- Part 5: CONFIRMS/CONTRADICTS pairs. Gate 5 Framing Revision Trigger required.
 
-**Step 5 — Forward Flag:** One per case. Must pass all C1-C5 criteria. Silence, partial compliance, and strategic ambiguity must each be pre-assigned to a named five-state outcome before window opens.
+**Step 5 — Forward Flag:** One per case. All C1-C5 criteria. Five-state pre-assignment mandatory. Wikipedia cannot satisfy C3 as sole or primary evidence.
 
-**Step 6 — Build PDF:** Using ReportLab. Import from build_core.py and styles.py. Follow visual template in ARCHITECTURE.md Section 13 exactly — navy header bar, teal strip, cover page with edition stats, colour-coded case banners, two-column fact tables, teal hypothesis dividers, sources section with tier in teal and incentive in amber. Output to /mnt/user-data/outputs/ and present the file. Inline prose or markdown does NOT constitute a valid edition and will not be accepted.
+**Step 6 — Build PDF:** Read build_core.py and styles.py from repository before building. ARCHITECTURE.md Section 13 visual template. Output to /mnt/user-data/outputs/ and present. Inline prose or markdown does NOT constitute a valid edition.
 
-### NAMED FAILURE MODE TO AVOID:
+### NAMED FAILURE MODES:
 
-Theatre of Rigor — skeleton appearance of CDIT structure without consistent execution. Every section must pass a quality gate. Pattern-matched summaries are not acceptable.
-
-### CASE B STANDING ENHANCEMENTS — APPLY FROM ED018 ONWARDS:
-
-See External Review Log above. Accepted points 2, 3, 4 (partial), 5 (partial), 6 are standing improvements. Point 1 (H1 reclassification) is permanently rejected — do not apply under any circumstances.
-
-### CASE A STANDING ENHANCEMENTS — APPLY FROM ED019 ONWARDS:
-
-Prompted by ChatGPT Review 001 critique and operator analysis. Two mandatory changes to Case A CDIT structure in every edition while Islamabad process is active.
-
-**Part 3 — Corroboration split (mandatory):** H-A2 (process continuation hypothesis) must separate its supporting evidence into two explicitly labelled legs:
-
-- Leg 1 — Tier 1/2 process signals only: observable facts at sweep time (delegations present/absent, SNSC window statements, Pakistani FM framing, H3 beneficiary analysis). These must independently sustain the stated probability range without reference to any Tier 4 source.
-- Leg 2 — Tier 4 directional only: Wikipedia forward record of continuation dates. Labelled explicitly as directional corroboration, not load-bearing. If Leg 1 cannot sustain H-A2 probability range without Leg 2, reduce the range and note the cap.
-
-**Part 4 — Tier 4 dependency test (mandatory, fourth TQL item):** Run the following test explicitly in the edition text: “H-A2 stripped of Wikipedia forward record — does Tier 1/2 evidence alone support the stated probability range? [Yes/No + one sentence reasoning].” If No: revise probability range downward and note confidence ceiling impact. If Yes: the critique is answered on the record and confidence level stands.
-
-### WIKIPEDIA USAGE RULE — IN FORCE FROM ED019:
-
-Wikipedia forward-looking timeline data (future session dates, predicted outcomes, post-sweep developments) may be used as **directional corroboration only**. Hard constraints:
-
-- Cannot be the sole or primary support for any hypothesis probability range.
-- Cannot satisfy Gate 0.3 (source-to-claim traceability) for any forward-looking claim.
-- Cannot be used to justify a confidence level that Tier 1/2 evidence alone would not support.
-- Any finding that relies on Wikipedia forward data must pass the Tier 4 dependency test in TQL Part 4.
-- Gate 0.4 incentive assessment for Wikipedia must note: editorial assembly of same Tier 1/2 feeds already swept, plus potential forward projection by editors — treat as Tier 4 with HIGH editorial incentive uncertainty, not neutral aggregation.
-
-**Pending architecture patch:** This rule is to be formalised as ARCHITECTURE.md v1.2.1. Flag for next Claude Code session. Until formalised, this SESSION_STATE entry is the operative rule.
+- **Theatre of Rigor** — skeleton structure without consistent execution
+- **Claim-Type Conflation** — facts, inferences, predictions in undifferentiated prose
+- **Source Amplification** — downstream echoes of single upstream treated as independent corroboration
+- **Escape-Hatch Assignment** — WATCH/PARTIAL/AMBIGUOUS used to preserve preferred narrative
 
 ### OTHER INSTRUCTIONS:
 
-- Do not re-explain the platform — treat this state file as ground truth
-- PMM rule from Entry 001 is active — apply to all new predictions
-- Edition 019 is the evening sweep for 11 April — primary focus is Islamabad Day 1 outcome and GL 134B status
-- First sweep task: check GL 134B on OFAC register and Islamabad statement/departure status
-- If asked to patch architecture: update this SESSION_STATE.md and commit to GitHub
+- Architecture version is v1.2.1 — all rules in ARCHITECTURE.md v1.2.1 are in force
+- Entry 001 and AI-001 through AI-004 are all active
+- Edition 019 is the evening sweep for 11 April — primary focus: Islamabad Day 1 outcome and GL 134B status
+- First sweep task: OFAC register (GL 134B) and Islamabad statement/departure status
 - If asked to commit files to GitHub: flag that Claude Code is required for that step
