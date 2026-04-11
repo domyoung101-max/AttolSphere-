@@ -5,8 +5,12 @@ Import in per-edition scripts:
     from build_core import (
         hr, thin_rule, tag_table, fact_table, hyp_table,
         disconf_table, flag_block, source_block, make_page_callbacks,
+        get_source_info, domain_quality_block,
     )
 """
+
+import json
+import os
 
 from reportlab.platypus import Paragraph, Table, TableStyle, HRFlowable
 from reportlab.lib import colors
@@ -19,6 +23,65 @@ from styles import (
     WHITE, RED_TAG, AMBER, GREEN_TAG, PURPLE, DK_GREEN,
     MARGIN, PAGE_W, PAGE_H,
 )
+
+# ── SOURCE REGISTRY ──────────────────────────────────────────────────────────
+
+_REGISTRY_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), 'SOURCE_REGISTRY.json'
+)
+
+
+def get_source_info(source_id_or_name):
+    """Look up source fields from SOURCE_REGISTRY.json v1.4.0.
+
+    Parameters
+    ----------
+    source_id_or_name : str
+        Either the source 'id' (e.g. 'T2-001') or the 'name' field.
+
+    Returns
+    -------
+    dict with keys:
+        tier                  – int or None
+        category              – str or None
+        incentive_baseline    – str or None
+        upstream_dependency   – str or None
+            None means the source is independently originating.
+            If the source is absent from the registry, returns the
+            sentinel string "UNKNOWN \u2014 not in registry".
+        independent_origination – bool or None
+    """
+    try:
+        with open(_REGISTRY_PATH, 'r', encoding='utf-8') as f:
+            registry = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {
+            'tier': None,
+            'category': None,
+            'incentive_baseline': None,
+            'upstream_dependency': 'UNKNOWN \u2014 not in registry',
+            'independent_origination': None,
+        }
+
+    for src in registry.get('sources', []):
+        if src.get('id') == source_id_or_name or \
+                src.get('name') == source_id_or_name:
+            return {
+                'tier': src.get('tier'),
+                'category': src.get('category'),
+                'incentive_baseline': src.get('incentive_baseline'),
+                'upstream_dependency': src.get('upstream_dependency'),
+                'independent_origination': src.get('independent_origination'),
+            }
+
+    return {
+        'tier': None,
+        'category': None,
+        'incentive_baseline': None,
+        'upstream_dependency': 'UNKNOWN \u2014 not in registry',
+        'independent_origination': None,
+    }
+
 
 # ── HELPERS ──────────────────────────────────────────────────────────────────
 
