@@ -5,8 +5,12 @@ Import in per-edition scripts:
     from build_core import (
         hr, thin_rule, tag_table, fact_table, hyp_table,
         disconf_table, flag_block, source_block, make_page_callbacks,
+        get_source_info,
     )
 """
+
+import json
+from pathlib import Path
 
 from reportlab.platypus import Paragraph, Table, TableStyle, HRFlowable
 from reportlab.lib import colors
@@ -19,6 +23,66 @@ from styles import (
     WHITE, RED_TAG, AMBER, GREEN_TAG, PURPLE, DK_GREEN,
     MARGIN, PAGE_W, PAGE_H,
 )
+
+# ── SOURCE REGISTRY LOOKUP ───────────────────────────────────────────────────
+
+_REGISTRY_PATH = Path(__file__).parent / 'SOURCE_REGISTRY.json'
+_registry_cache: list | None = None
+
+
+def _load_registry() -> list:
+    """Load and cache the sources list from SOURCE_REGISTRY.json."""
+    global _registry_cache
+    if _registry_cache is None:
+        with _REGISTRY_PATH.open(encoding='utf-8') as fh:
+            data = json.load(fh)
+        # The registry stores all sources in a single 'sources' array.
+        # (Equivalent to both core_sweep_feeds and supplementary_feeds.)
+        _registry_cache = data.get('sources', [])
+    return _registry_cache
+
+
+def get_source_info(domain: str) -> dict:
+    """Look up tier, category, and incentive_baseline for a domain.
+
+    Searches all entries in SOURCE_REGISTRY.json['sources'], matching
+    the supplied domain against each entry's 'domains' list.  A plain
+    domain (e.g. 'reuters.com') also matches registry entries that
+    include sub-paths for the same host (e.g. 'x.com/IDF').
+
+    Parameters
+    ----------
+    domain : str
+        Bare domain name, e.g. 'reuters.com' or 'bbc.co.uk'.
+
+    Returns
+    -------
+    dict with keys:
+        tier              : int   — 1–4 per registry
+        category          : str   — e.g. 'High-Authority Secondary'
+        incentive_baseline: str   — 'LOW' / 'LOW-MEDIUM' / 'MEDIUM' / 'HIGH'
+
+    Safe defaults (tier 2, Unknown, MEDIUM) are returned when the
+    domain is not found in the registry.
+    """
+    domain = domain.strip().lower()
+    for entry in _load_registry():
+        for reg_domain in entry.get('domains', []):
+            reg_norm = reg_domain.strip().lower()
+            # Exact match, or the registry entry is a sub-path of the domain
+            # (e.g. 'x.com/IDF' vs query 'x.com').
+            if reg_norm == domain or reg_norm.startswith(domain + '/'):
+                return {
+                    'tier':               entry['tier'],
+                    'category':           entry['category'],
+                    'incentive_baseline': entry['incentive_baseline'],
+                }
+    return {
+        'tier':               2,
+        'category':           'Unknown',
+        'incentive_baseline': 'MEDIUM',
+    }
+
 
 # ── HELPERS ──────────────────────────────────────────────────────────────────
 
