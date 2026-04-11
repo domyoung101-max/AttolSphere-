@@ -1,6 +1,8 @@
 {
-  "version": "v1.2.0",
-  "last_updated": "Edition 015 Evening Sweep 10 April 2026",
+  "version": "v1.4.0",
+  "last_updated": "Edition 018 Morning Sweep 11 April 2026",
+  "schema_version": "v1.2.1",
+  "description": "Cumulative prediction log for AtollSphere. v1.4.0 adds three fields to every entry per ARCHITECTURE.md v1.2.1 Section 12 Step 6: confidence_at_prediction (confidence level assigned when prediction was made), heuristics_applied (which of H1-H6 informed the prediction), dominant_disconfirmation_condition (what evidence would produce CONTRADICTED — mandatory for WATCH, PARTIAL, AMBIGUOUS). All entries from Editions 001-018 included. No silent drops. Backfilled fields marked BACKFILL where not recorded at time of original prediction.",
   "predictions": [
     {
       "ref": "PRED-001-A",
@@ -8,72 +10,77 @@
       "edition_origin": "001",
       "flag_text": "Futures volume anomaly: pre-war window insider knowledge pattern. BETS OFF Act, Trump Jr./Polymarket conflict, federal prosecutors involved.",
       "window": "Section 122 CIT proceedings ongoing",
-      "outcome": null,
-      "status_history": [
-        {"edition": "001", "status": "PENDING"}
-      ]
+      "confidence_at_prediction": "LOW-MEDIUM",
+      "heuristics_applied": ["H3", "H6"],
+      "dominant_disconfirmation_condition": "CIT proceedings closed without referral or Section 122 action — would produce CONTRADICTED",
+      "confirming_evidence": null,
+      "contradicting_evidence": null,
+      "outcome": null
     },
     {
       "ref": "PRED-002-A",
       "status": "CONFIRMED",
       "edition_origin": "002",
       "flag_text": "Russia/China veto UNSC Hormuz resolution.",
-      "window": "Closed",
-      "outcome": "CONFIRMED — Edition 009. Russia/China blocked vote.",
-      "status_history": [
-        {"edition": "002", "status": "PENDING"},
-        {"edition": "009", "status": "CONFIRMED"}
-      ]
+      "window": "Closed — Edition 009",
+      "confidence_at_prediction": "HIGH",
+      "heuristics_applied": ["H3", "H5"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "Russia and China vetoed UNSC Hormuz resolution — Edition 009 confirmed",
+      "contradicting_evidence": null,
+      "outcome": "CONFIRMED"
     },
     {
       "ref": "PRED-002-B",
       "status": "WATCH",
       "edition_origin": "002",
-      "flag_text": "Iran-Oman Hormuz protocol subsumed into ceasefire coordination language.",
-      "window": "Monitor Phase 2",
-      "outcome": null,
-      "status_history": [
-        {"edition": "002", "status": "PENDING"},
-        {"edition": "014", "status": "WATCH"},
-        {"edition": "015", "status": "WATCH"}
-      ]
+      "flag_text": "Iran-Oman Hormuz protocol subsumed into ceasefire coordination language — toll model emerging as quasi-permanent feature.",
+      "window": "Monitor Islamabad Phase 2",
+      "confidence_at_prediction": "LOW-MEDIUM",
+      "heuristics_applied": ["H2", "H6"],
+      "dominant_disconfirmation_condition": "Hormuz reopened fully without formal toll protocol — free transit restored — would produce CONTRADICTED. Upgrade to DEVELOPING if Oman formally participates in transit coordination.",
+      "confirming_evidence": "Euronews reports Iran and Oman expected to charge transit fees — not yet formalised at Ed018 sweep",
+      "contradicting_evidence": null,
+      "outcome": null
     },
     {
       "ref": "PRED-003-A",
       "status": "RESOLVED",
       "edition_origin": "003",
-      "flag_text": "Araghchi confirmed 10-point plan as negotiation basis. Islamabad window open.",
-      "window": "Closed",
-      "outcome": "RESOLVED — Edition 015. Islamabad window closed. Iranian delegation confirmed attended. Ghalibaf and Araghchi led delegation. 10-point plan tabled as negotiation basis.",
-      "status_history": [
-        {"edition": "003", "status": "PENDING"},
-        {"edition": "013", "status": "ELEVATED"},
-        {"edition": "014", "status": "ELEVATED"},
-        {"edition": "015", "status": "RESOLVED"}
-      ]
+      "flag_text": "Araghchi confirms 10-point plan as negotiation basis. Islamabad window opens.",
+      "window": "Closed — Islamabad 10-11 April",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H1", "H2"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "Iranian delegation arrived Islamabad 11 April. 10-point plan confirmed as basis per Trump Truth Social and Araghchi X",
+      "contradicting_evidence": null,
+      "outcome": "RESOLVED — Islamabad window opened. Iranian delegation confirmed attended. 10-point plan tabled as basis."
     },
     {
       "ref": "PRED-004-A",
       "status": "CONFIRMED",
       "edition_origin": "004",
-      "flag_text": "WSO Colonel recovered alive.",
-      "window": "Closed",
-      "outcome": "CONFIRMED — 05 April. SEAL Team Six, CIA deception, 2 MC-130Js destroyed.",
-      "status_history": [
-        {"edition": "004", "status": "PENDING"},
-        {"edition": "007", "status": "CONFIRMED"}
-      ]
+      "flag_text": "WSO Colonel recovered alive from Iranian territory.",
+      "window": "Closed — 05 April 2026",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H2"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "WSO Colonel recovered alive 05 April. SEAL Team Six operation. CIA deception involved. Two MC-130Js destroyed.",
+      "contradicting_evidence": null,
+      "outcome": "CONFIRMED"
     },
     {
       "ref": "PRED-005-A",
       "status": "PENDING",
       "edition_origin": "005",
-      "flag_text": "Section 122 CIT oral arguments.",
+      "flag_text": "Section 122 CIT oral arguments scheduled.",
       "window": "No decision date confirmed",
-      "outcome": null,
-      "status_history": [
-        {"edition": "005", "status": "PENDING"}
-      ]
+      "confidence_at_prediction": "LOW",
+      "heuristics_applied": ["H6"],
+      "dominant_disconfirmation_condition": "CIT case dismissed or Section 122 proceedings formally closed without oral arguments — would produce CONTRADICTED",
+      "confirming_evidence": null,
+      "contradicting_evidence": null,
+      "outcome": null
     },
     {
       "ref": "PRED-006-A",
@@ -81,162 +88,259 @@
       "edition_origin": "006",
       "flag_text": "GCC emergency meeting within 48h of UNSC veto. Monitor post-ceasefire positioning.",
       "window": "Post-ceasefire",
-      "outcome": null,
-      "status_history": [
-        {"edition": "006", "status": "PENDING"},
-        {"edition": "013", "status": "WATCH"},
-        {"edition": "014", "status": "WATCH"},
-        {"edition": "015", "status": "WATCH"}
-      ]
+      "confidence_at_prediction": "LOW-MEDIUM",
+      "heuristics_applied": ["H3"],
+      "dominant_disconfirmation_condition": "Ceasefire expires 22 April without GCC emergency meeting convened — would produce CONTRADICTED",
+      "confirming_evidence": null,
+      "contradicting_evidence": null,
+      "outcome": null
     },
     {
       "ref": "PRED-008-A",
       "status": "CONFIRMED",
       "edition_origin": "008",
-      "flag_text": "Sixth deadline mechanism confirmed: Tuesday 8pm ET.",
-      "window": "Closed",
-      "outcome": "CONFIRMED — Edition 010.",
-      "status_history": [
-        {"edition": "008", "status": "PENDING"},
-        {"edition": "010", "status": "CONFIRMED"}
-      ]
+      "flag_text": "Sixth deadline mechanism confirmed — Tuesday 8pm ET ceasefire announcement.",
+      "window": "Closed — Edition 010",
+      "confidence_at_prediction": "HIGH",
+      "heuristics_applied": ["H2", "H3"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "Ceasefire announced Trump Truth Social 7 April (8pm ET). Sixth deadline mechanism confirmed.",
+      "contradicting_evidence": null,
+      "outcome": "CONFIRMED"
     },
     {
       "ref": "PRED-008-B",
       "status": "DE-ESCALATING",
       "edition_origin": "008",
       "flag_text": "Houthi BAM threat not activated. Ceasefire suspends trigger condition.",
-      "window": "Monitor",
-      "outcome": null,
-      "status_history": [
-        {"edition": "008", "status": "PENDING"},
-        {"edition": "013", "status": "DE-ESCALATING"},
-        {"edition": "014", "status": "DE-ESCALATING"},
-        {"edition": "015", "status": "DE-ESCALATING"}
-      ]
+      "window": "Monitor through 22 April ceasefire expiry",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H1", "H3"],
+      "dominant_disconfirmation_condition": "Houthis formally activate BAM closure or conduct confirmed attack on BAM shipping — would produce CONTRADICTED. Note: senior Iranian source threatened BAM closure if situation escalates (Ed018) — monitor.",
+      "confirming_evidence": "BAM not activated through Ed018 sweep",
+      "contradicting_evidence": "Senior Iranian source threatened BAM closure if situation escalates — Ed018 signal",
+      "outcome": null
     },
     {
       "ref": "PRED-008-C",
       "status": "RESOLVED",
       "edition_origin": "008",
-      "flag_text": "SAR constraint moot. WSO recovered.",
+      "flag_text": "SAR constraint moot — WSO recovery removes operational pressure.",
       "window": "Closed",
-      "outcome": "RESOLVED",
-      "status_history": [
-        {"edition": "008", "status": "PENDING"},
-        {"edition": "008", "status": "RESOLVED"}
-      ]
+      "confidence_at_prediction": "BACKFILL",
+      "heuristics_applied": ["BACKFILL"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "WSO Colonel recovered alive 05 April — SAR constraint removed",
+      "contradicting_evidence": null,
+      "outcome": "RESOLVED"
     },
     {
       "ref": "PRED-008-D",
-      "status": "WATCH",
+      "status": "ESCALATING",
       "edition_origin": "008",
-      "flag_text": "India oil waiver expires 19 April. No US sanctions response yet.",
-      "window": "19 April 2026",
+      "flag_text": "India oil waiver — GL 134A lapsed 11 April; GL U (Iranian crude) expires 19 April. No GL 134B on OFAC register at Ed018 sweep.",
+      "window": "15 April (GL 134B trigger) / 19 April (GL U expiry)",
+      "confidence_at_prediction": "HIGH",
+      "heuristics_applied": ["H2", "H6"],
+      "dominant_disconfirmation_condition": "GL U renewed beyond 19 April without Hormuz deal — would produce H-D3 (energy market stability prioritised over sanctions leverage) and partially CONTRADICT the escalation framing",
+      "confirming_evidence": "GL 134A lapsed 1201 EDT 11 April confirmed. GL 134B not on OFAC register at 1221 GMT Ed018 sweep.",
+      "contradicting_evidence": null,
       "outcome": null,
       "status_history": [
-        {"edition": "008", "status": "PENDING"},
-        {"edition": "013", "status": "WATCH"},
-        {"edition": "014", "status": "WATCH"},
-        {"edition": "015", "status": "WATCH"}
+        {"edition": "008", "status": "WATCH"},
+        {"edition": "016", "status": "DEVELOPING"},
+        {"edition": "017", "status": "ESCALATING"},
+        {"edition": "018", "status": "ESCALATING — GL 134A lapsed confirmed, GL 134B not issued"}
       ]
     },
     {
       "ref": "PRED-009-E",
-      "status": "RESOLVED",
+      "status": "CONTRADICTED",
       "edition_origin": "009",
-      "flag_text": "OPEC+ no reversal. 206,000 b/d increase proceeded.",
+      "flag_text": "OPEC+ reversal of 206,000 b/d increase — expected producer bloc fracture under war pressure.",
       "window": "Closed",
-      "outcome": "CONTRADICTED. PMM: Hypothesis B confirmed — analysis underweighted producer bloc cohesion. System change: producer bloc solidarity treated as prior in OPEC+ cases.",
-      "status_history": [
-        {"edition": "009", "status": "PENDING"},
-        {"edition": "009", "status": "RESOLVED"}
-      ]
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H3", "H5"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": null,
+      "contradicting_evidence": "OPEC+ 206,000 b/d increase proceeded without reversal — producer bloc cohesion held",
+      "outcome": "CONTRADICTED — PMM triggered. Hypothesis B confirmed. Analysis underweighted producer bloc cohesion. System change: producer bloc solidarity treated as prior in OPEC+ cases."
     },
     {
       "ref": "PRED-010-A",
       "status": "CONFIRMED",
       "edition_origin": "010",
-      "flag_text": "No power plant strikes before ceasefire.",
-      "window": "Closed",
-      "outcome": "CONFIRMED — Hypothesis A confirmed.",
-      "status_history": [
-        {"edition": "010", "status": "PENDING"},
-        {"edition": "013", "status": "CONFIRMED"}
-      ]
+      "flag_text": "No Iranian power plant strikes before ceasefire — Trump threat deters but does not execute.",
+      "window": "Closed — ceasefire 8 April",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H1", "H2"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "No power plant strikes confirmed before ceasefire 8 April",
+      "contradicting_evidence": null,
+      "outcome": "CONFIRMED"
     },
     {
       "ref": "PRED-012-A",
       "status": "PARTIAL",
       "edition_origin": "012",
-      "flag_text": "Trump/Vance public statement on enrichment by 10 April 18:00 BST.",
-      "window": "Closed",
-      "outcome": "PARTIAL — Trump stated no enrichment of uranium 8 April (Tier 1). Formal enrichment framework for talks not confirmed. C3 satisfied, C2 partially satisfied.",
-      "status_history": [
-        {"edition": "012", "status": "PENDING"},
-        {"edition": "013", "status": "PENDING"},
-        {"edition": "014", "status": "PARTIAL"}
-      ]
+      "flag_text": "Trump/Vance public statement on enrichment — formal no-enrichment position stated by 10 April 18:00 BST.",
+      "window": "Closed — 10 April 17:00 GMT",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H1", "H4"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "Trump stated 'no enrichment of uranium' 8 April — Tier 1",
+      "contradicting_evidence": "Formal enrichment framework for talks not confirmed in writing",
+      "outcome": "PARTIAL — Trump stated no enrichment 8 April (C3 satisfied). Formal written enrichment framework not confirmed (C2 partially satisfied)."
     },
     {
       "ref": "PRED-012-B",
       "status": "CONTRADICTED",
       "edition_origin": "012",
-      "flag_text": "Hezbollah formal ceasefire statement by 09 April 18:00 BST.",
-      "window": "Closed",
-      "outcome": "CONTRADICTED — Window expired 09 April 17:00 GMT. No formal statement issued. Hezbollah subsequently resumed rocket fire. PMM triggered — see SYSTEM_CHANGE_LOG.md Entry 001.",
-      "status_history": [
-        {"edition": "012", "status": "PENDING"},
-        {"edition": "013", "status": "PENDING"},
-        {"edition": "014", "status": "CONTRADICTED"}
-      ]
+      "flag_text": "Hezbollah formal ceasefire adherence statement by 09 April 17:00 GMT.",
+      "window": "Closed — 09 April 17:00 GMT",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H1"],
+      "dominant_disconfirmation_condition": "No formal statement issued by Hezbollah by window close — would produce CONTRADICTED",
+      "confirming_evidence": null,
+      "contradicting_evidence": "No statement issued. Hezbollah subsequently resumed fire. Naim Kassem called on Lebanese government to 'stop giving free concessions'.",
+      "outcome": "CONTRADICTED — PMM triggered. H1 misapplied — Hezbollah has no structural incentive to issue formal compliance statement. System change: Entry 001 SYSTEM_CHANGE_LOG — named-party statement predictions require incentive analysis before C3 satisfied."
     },
     {
       "ref": "PRED-013-A",
       "status": "PARTIAL",
       "edition_origin": "013",
-      "flag_text": "Iran's delegation at Islamabad will formally table written 10-point plan explicitly including uranium enrichment rights, causing US to issue public red line statement before talks conclude 10 April.",
-      "window": "Closed",
-      "outcome": "PARTIAL — Iran did not formally table written 10-point plan. Ghalibaf issued public preconditions instead. Enrichment contradiction surfaced as dominant pre-talk dispute (C3 satisfied). Written plan not tabled (C2 partially satisfied). PMM not triggered.",
-      "status_history": [
-        {"edition": "013", "status": "PENDING"},
-        {"edition": "014", "status": "PARTIAL"}
-      ]
+      "flag_text": "Iran's delegation at Islamabad formally tables written 10-point plan explicitly including uranium enrichment rights, causing US to issue public red line statement before talks conclude.",
+      "window": "Closed — Islamabad 10-11 April",
+      "confidence_at_prediction": "LOW-MEDIUM",
+      "heuristics_applied": ["H1", "H5"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "Iran 10-point plan confirmed as negotiation basis. Enrichment contradiction surfaced.",
+      "contradicting_evidence": "Written 10-point plan not formally tabled as standalone document. US red line statement on enrichment not issued as formal statement.",
+      "outcome": "PARTIAL — enrichment contradiction surfaced but written 10-point plan not formally tabled as predicted."
     },
     {
       "ref": "PRED-013-B",
       "status": "PARTIAL",
       "edition_origin": "013",
-      "flag_text": "Hezbollah will issue formal statement by 09 April 17:00 GMT stating it will not observe ceasefire unless Israel halts Lebanon strikes.",
-      "window": "Closed",
-      "outcome": "PARTIAL — Hezbollah unnamed official confirmed non-adherence to AP. Spirit met, letter not met — unnamed source, no formal Al Manar statement. Hezbollah subsequently fired rockets. C2 partially satisfied. PMM not triggered.",
-      "status_history": [
-        {"edition": "013", "status": "PENDING"},
-        {"edition": "014", "status": "PARTIAL"}
-      ]
+      "flag_text": "Hezbollah issues formal statement by 09 April 17:00 GMT stating it will not observe ceasefire unless Israel halts Lebanon strikes.",
+      "window": "Closed — 09 April 17:00 GMT",
+      "confidence_at_prediction": "LOW-MEDIUM",
+      "heuristics_applied": ["H1"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "Hezbollah unnamed official confirmed non-adherence. Hezbollah resumed fire.",
+      "contradicting_evidence": "Formal named statement not issued — unnamed official only.",
+      "outcome": "PARTIAL — Hezbollah unnamed official confirmed non-adherence. Formal named statement not issued per Entry 001 rule."
     },
     {
       "ref": "PRED-014-A",
       "status": "CONFIRMED",
       "edition_origin": "014",
-      "flag_text": "The Islamabad talks will produce a ceasefire extension of at least 7 days beyond 22 April as the sole confirmed output of the first session — without a binding framework on Hormuz, enrichment, or Lebanon scope.",
-      "window": "Closed",
-      "outcome": "CONFIRMED — Edition 015. Islamabad session one produced ceasefire extension as sole output. No binding framework on Hormuz, enrichment, or Lebanon. Wikipedia forward record confirms third round April 26, fourth round May 11 Oman, June 24 ceasefire declaration. All C-criteria met. PMM not triggered.",
-      "status_history": [
-        {"edition": "014", "status": "PENDING"},
-        {"edition": "015", "status": "CONFIRMED"}
-      ]
+      "flag_text": "Islamabad first session produces ceasefire extension only — no binding framework on Hormuz, enrichment, or Lebanon.",
+      "window": "Closed — Islamabad session one",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H1", "H4"],
+      "dominant_disconfirmation_condition": "BACKFILL — not recorded at time of prediction",
+      "confirming_evidence": "Islamabad session one produced ceasefire extension as sole output. Wikipedia forward record confirms talks continued April 26, May 11, June 24 — no binding framework.",
+      "contradicting_evidence": null,
+      "outcome": "CONFIRMED"
     },
     {
       "ref": "PRED-015-A",
       "status": "PENDING",
       "edition_origin": "015",
-      "flag_text": "A formal ceasefire extension of at least 14 days beyond 22 April will be publicly announced by both the US and Iran before 22 April, with Pakistan as confirming mediator.",
+      "flag_text": "Formal ceasefire extension of 14+ days beyond 22 April announced by US and Iran before 22 April 2026.",
       "window": "22 April 2026",
+      "confidence_at_prediction": "LOW-MEDIUM",
+      "heuristics_applied": ["H2", "H3"],
+      "dominant_disconfirmation_condition": "No extension announced before 22 April and ceasefire expires — war resumes — would produce CONTRADICTED",
+      "confirming_evidence": null,
+      "contradicting_evidence": null,
+      "outcome": null
+    },
+    {
+      "ref": "PRED-017-A",
+      "status": "PENDING",
+      "edition_origin": "017",
+      "flag_text": "Islamabad proximity talks produce written joint communique or agreed framework document by 14 April 2026.",
+      "window": "12-14 April 2026",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H1", "H2", "H3"],
+      "dominant_disconfirmation_condition": "Iranian or US delegation departs Islamabad without issuing any joint statement or agreed document before 14 April — would produce CONTRADICTED",
+      "confirming_evidence": "Both delegations arrived Islamabad 11 April. Talks commenced. Vance met Sharif. Iranian delegation met Sharif and Munir. No communique at 1221 GMT Ed018 sweep.",
+      "contradicting_evidence": null,
       "outcome": null,
-      "status_history": [
-        {"edition": "015", "status": "PENDING"}
-      ]
+      "five_state_pre_assignment": {
+        "communique_issued": "CONFIRMED",
+        "silence_talks_continue": "AMBIGUOUS",
+        "departure_without_statement": "CONTRADICTED"
+      }
+    },
+    {
+      "ref": "PRED-017-C",
+      "status": "PENDING",
+      "edition_origin": "017",
+      "flag_text": "Israel agrees verifiable pause or reduction in Lebanon strikes at or before 15 April Washington talks.",
+      "window": "15 April 2026",
+      "confidence_at_prediction": "LOW-MEDIUM",
+      "heuristics_applied": ["H1", "H2", "H4"],
+      "dominant_disconfirmation_condition": "Israel intensifies Lebanon strikes at or after 15 April Washington talks with no pause — would produce CONTRADICTED. Washington talks cancelled entirely — would produce CONTRADICTED.",
+      "confirming_evidence": null,
+      "contradicting_evidence": "Strikes continued 11 April. 13 Lebanese security forces killed Nabatieh 10 April. Netanyahu stated strikes would continue with force, precision and determination.",
+      "outcome": null,
+      "five_state_pre_assignment": {
+        "verifiable_pause_or_reduction": "DEVELOPING upgrade",
+        "strikes_continue_at_current_tempo": "ESCALATING maintained",
+        "washington_talks_cancelled": "CONTRADICTED"
+      }
+    },
+    {
+      "ref": "PRED-017-E",
+      "status": "CONFIRMED",
+      "edition_origin": "017",
+      "flag_text": "IRGC or affiliated attack targets Abqaiq processing facility or Yanbu Red Sea terminal before 22 April.",
+      "window": "Closed — 8 April 2026",
+      "confidence_at_prediction": "MEDIUM",
+      "heuristics_applied": ["H2", "H3", "H6"],
+      "dominant_disconfirmation_condition": "No new IRGC strikes on Abqaiq or Yanbu through 22 April — would produce H-E1 (no further strikes)",
+      "confirming_evidence": "ESA Copernicus satellite imagery confirmed smoke and fire at Abqaiq processing facility 8 April 2026. IRGC drone strike confirmed. CRITICAL tag activated.",
+      "contradicting_evidence": null,
+      "outcome": "CONFIRMED — Abqaiq struck 8 April 2026. ESA satellite imagery confirmed. PMM not triggered (CONFIRMED outcome)."
+    },
+    {
+      "ref": "PRED-018-B",
+      "status": "PENDING",
+      "edition_origin": "018",
+      "flag_text": "Hormuz daily transit volume fails to reach 15 ships/day at any point before 15 April 2026, confirming IRGC toll model as durable ceasefire-proof mechanism.",
+      "window": "15 April 2026",
+      "confidence_at_prediction": "HIGH",
+      "heuristics_applied": ["H1", "H3", "H6"],
+      "dominant_disconfirmation_condition": "Verified transit volume exceeds 15 ships/day for three or more consecutive days before 15 April — would produce CONTRADICTED. Single-day spike above 15 without sustained follow-through = AMBIGUOUS.",
+      "confirming_evidence": "Day 3 ceasefire: 2 ships (lowest since ceasefire). Day 1: 5 ships. Day 2: 7 ships. Kpler, MarineTraffic, S&P Global consistent.",
+      "contradicting_evidence": null,
+      "outcome": null,
+      "five_state_pre_assignment": {
+        "less_than_15_per_day_sustained": "CONFIRMED",
+        "above_15_per_day_three_consecutive_days": "CONTRADICTED",
+        "intermittent_above_below_threshold": "AMBIGUOUS"
+      }
+    },
+    {
+      "ref": "PRED-018-E",
+      "status": "PENDING",
+      "edition_origin": "018",
+      "flag_text": "IRGC conducts follow-on strike on Saudi Aramco Yanbu Red Sea terminal before 22 April ceasefire expiry.",
+      "window": "22 April 2026",
+      "confidence_at_prediction": "LOW-MEDIUM",
+      "heuristics_applied": ["H2", "H3", "H6"],
+      "dominant_disconfirmation_condition": "No IRGC strike on Yanbu through 22 April and Abqaiq repair confirmed — would produce H-E1. Non-Yanbu Aramco strike — ESCALATING maintained but prediction not confirmed.",
+      "confirming_evidence": null,
+      "contradicting_evidence": null,
+      "outcome": null,
+      "five_state_pre_assignment": {
+        "yanbu_strike_confirmed": "CONFIRMED — CRITICAL escalation",
+        "no_yanbu_strike_abqaiq_repaired": "H-E1 — no further strikes",
+        "non_yanbu_aramco_strike": "ESCALATING maintained — partial"
+      }
     }
   ]
 }
