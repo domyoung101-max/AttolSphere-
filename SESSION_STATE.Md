@@ -27,7 +27,7 @@ AtollSphere/
 │   └── styles.py                # Pending refactor
 ├── data/
 │   ├── PREDICTION_LOG.json      # v1.2.0 — needs update for Ed015
-│   └── SOURCE_REGISTRY.json     # Pending creation
+│   └── SOURCE_REGISTRY.json     # v1.3.0 — 44 sources registered
 ├── outputs/
 │   └── .gitkeep
 └── README.md                    # Pending creation
