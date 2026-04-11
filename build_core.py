@@ -332,6 +332,41 @@ def flag_block(ref, number, body_text, gate_note, styles):
     ]
 
 
+def domain_quality_block(assessment_text, styles):
+    """Distinct labelled block for domain quality assessment at close of Part 2.
+
+    Returns a list of flowables. Rendered as a navy left border bar (3pt),
+    teal bold 'DOMAIN QUALITY ASSESSMENT' label at 7pt, and assessment text
+    at 8pt normal weight.
+
+    Replaces the former approach of embedding domain quality as a final prose
+    sentence inside heuristic analysis. Implements ARCHITECTURE.md v1.2.1
+    Section 4 Part 2 requirement and resolves the Claim-Type Conflation
+    named failure mode (Section 5).
+    """
+    content = [
+        Paragraph(
+            '<b>DOMAIN QUALITY ASSESSMENT</b>',
+            ParagraphStyle('dqa_label', fontName='Helvetica-Bold',
+                           fontSize=7, textColor=TEAL, spaceAfter=2)),
+        Paragraph(
+            assessment_text,
+            ParagraphStyle('dqa_body', fontName='Helvetica',
+                           fontSize=8, textColor=CHARCOAL, leading=11)),
+    ]
+    tbl = Table([[content]], colWidths=[174 * mm])
+    tbl.setStyle(TableStyle([
+        ('VALIGN',        (0, 0), (-1, -1), 'TOP'),
+        ('LEFTPADDING',   (0, 0), (-1, -1), 8),
+        ('RIGHTPADDING',  (0, 0), (-1, -1), 6),
+        ('TOPPADDING',    (0, 0), (-1, -1), 4),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+        ('LINEBEFORE',    (0, 0), (0, -1),  3, NAVY),
+        ('BACKGROUND',    (0, 0), (-1, -1), LIGHT_BG),
+    ]))
+    return [tbl]
+
+
 def source_block(sources, styles):
     """Formatted source list. Returns a list of flowables.
 
