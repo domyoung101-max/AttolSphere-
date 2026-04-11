@@ -55,7 +55,7 @@ AtollSphere/
 | B | Hormuz — Franchise Operational, Toll Regime Emerging | ESCALATING | HIGH | Strait re-closed 8 Apr; IRGC toll/permission model confirmed |
 | C | Lebanon / Hezbollah — Active Fracture Line | ESCALATING | HIGH | 1,953+ killed total; Iran blocking conditions undelivered |
 | D | India Oil Waiver — 8 Days | DEVELOPING | HIGH | Russian waiver GL 134A lapsed 11 April — leading indicator |
-| E | Abqaiq / East-West Pipeline | ESCALATING | HIGH | UPGRADED from WATCH — IRGC drone struck Petroline 8 April |
+| E | Abqaiq / East-West Pipeline | ESCALATING | HIGH | UPGRADED from WATCH — IRGC drone struck Petroline 8 April. Broader than single pumping station — Manifa oil field (-300,000 b/d), Satorp, Ras Tanura, Samref, Riyadh refineries, Juaymah also affected |
 
 ---
 
@@ -117,12 +117,15 @@ AtollSphere/
 ### Edition 016 — New Findings
 - Russian waiver GL 134A lapsed 11 April 2026 at 12:01 EDT — extension reported agreed in principle (Bessent-Trump meeting 9 April per Reuters) but no formal OFAC announcement as of 0900 BST sweep time
 - IRGC drone struck East-West Pipeline (Petroline) pumping station on 8 April — ceasefire day — IRGC attribution confirmed consistent with 2019 template. Case E upgraded WATCH → ESCALATING
+- Argus confirms damage significantly broader than single pumping station — Manifa oil field (-300,000 b/d), Satorp, Ras Tanura, Samref, Riyadh refineries, Juaymah all affected
 - Iran now controls both Hormuz (primary corridor) and Petroline (bypass route) simultaneously — structural leverage maximum
 - Mine hazard: Iran reportedly unable to reopen Hormuz fully due to own IRGC-laid mines — technical constraint independent of political will providing political cover for delay
 - Iranian Islamabad delegation: 71 personnel — Ghalibaf, Araghchi, Hemmati (Central Bank), Takht-Ravanchi (Deputy FM). Largest Iranian diplomatic delegation since 1979
 - OFAC staffing constraint: licensing division down from 40 to 22 staff — processing capacity may delay formal waiver announcement even if political decision made
 - Israel-Lebanon direct talks announced for Washington (Tuesday 15 April) — diplomatic exit path exists but Lebanon precondition (no negotiations under fire) is blocking condition
 - Proximity talks only at Islamabad — two separate rooms, Pakistani FM Dar shuttling. No face-to-face sessions confirmed in session one
+- PRED-017-C identified: Israel verifiable Lebanon strike pause at 15 April Washington talks → upgrade to DEVELOPING; strikes continue → ESCALATING maintained
+- PRED-017-E identified: Abqaiq or Yanbu targeted → CRITICAL tag trigger; no new strikes → H-E1 CONFIRMED
 
 ### Edition 015 — Key Findings
 - PRED-014-A CONFIRMED — ceasefire extended, talks continued through May/June per Wikipedia forward record
@@ -146,13 +149,13 @@ AtollSphere/
 |---|---|---|
 | IMMEDIATE | OFAC announcement on Russian GL 134A extension | Monitor OFAC register — GL 134B or equivalent |
 | 15 APRIL | No India waiver announcement | Upgrade PRED-008-D to ESCALATING |
-| 15 APRIL | Israel-Lebanon Washington talks begin | Deactivate Lebanon exit trigger if Hezbollah halts fire |
+| 15 APRIL | Israel-Lebanon Washington talks begin | Monitor for Lebanon strike pause — PRED-017-C resolution |
 | 19 APRIL | India waiver expiry | PRED-008-D resolution |
 | 22 APRIL | Ceasefire expiry | PRED-015-A resolution |
 | WATCH | Islamabad joint statement / next session format | Any direct talks agreement = meaningful escalation of process |
-| WATCH | Aramco East-West Pipeline damage assessment | Single pumping station repair timeline |
+| WATCH | Aramco / Manifa / Satorp / Ras Tanura damage assessment | Broader than single pumping station — full impact assessment required |
 | WATCH | Oman involvement in Hormuz transit coordination | Toll model indicator — upgrade PRED-002-B to DEVELOPING |
-| WATCH | Follow-on IRGC targeting of Saudi energy infrastructure | 2019 pattern: East-West hit followed by Abqaiq 4 months later |
+| WATCH | Follow-on IRGC targeting of Abqaiq or Yanbu | PRED-017-E resolution trigger — CRITICAL tag if confirmed |
 
 ---
 
@@ -176,7 +179,7 @@ All four patches applied:
 ## OPEN BUILD TASKS
 - [ ] Upload logo files to repository — atollsphere_logo_v2.png and ls_logo_v2.png
 - [ ] Claude Code: patch build_core.py to include logos in PDF header and cover
-- [ ] Update PREDICTION_LOG.json with Edition 016 outcomes
+- [ ] Update PREDICTION_LOG.json with Edition 016 and 017 outcomes
 - [ ] Backfill status_history for Editions 001-012 when log data available
 
 ---
@@ -209,7 +212,7 @@ Do not build any edition until both files have been fetched and read.
 
 **Step 5 — Forward Flag:** One per case. Must pass all C1-C5 criteria. Silence, partial compliance, and strategic ambiguity must each be pre-assigned to a named five-state outcome before window opens.
 
-**Step 6 — Build PDF:** Using ReportLab. Import from build_core.py and styles.py. Follow visual template in ARCHITECTURE.md Section 13 exactly — navy header bar, teal strip, cover page with edition stats, colour-coded case banners, two-column fact tables, teal hypothesis dividers, sources section with tier in teal and incentive in amber. Output to /mnt/user-data/outputs/ and present the file. Inline prose or markdown does NOT constitute a valid edition and will not be accepted.
+**Step 6 — Build PDF:** Using ReportLab. Import from build_core.py and styles.py. Follow visual template in ARCHITECTURE.md Section 13 exactly — navy header bar, teal strip, cover page with edition stats, colour-coded case banners, two-column fact tables, teal hypothesis dividers, sources section with tier in teal and incentive in amber. Output to /mnt/user-data/outputs/ and present the file. Inline prose or markdown does NOT constitute a valid edition and will not be accepted. Before running the build script verify all parentheses and brackets are closed. If the script fails with a syntax error fix it and re-run automatically without asking for permission. Keep attempting until the PDF compiles successfully.
 
 ### NAMED FAILURE MODE TO AVOID:
 Theatre of Rigor — skeleton appearance of CDIT structure without consistent execution. Every section must pass a quality gate. Pattern-matched summaries are not acceptable.
