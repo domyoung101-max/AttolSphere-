@@ -55,7 +55,7 @@ Ed029 published with incorrect timestamp “19 April 2026 · 1954 GMT · War Day
 - Input: Calibration Map mids + PRED resolutions (CONFIRMED=1, CONTRADICTED=0).
 - Bands: 0-10/10-20/...70+%.
 - Apply: Raw prob × (1 + adjustment).
-- Ed031: Append GL U/Lebanon → re-compute.
+- **NEXT**: Append current sweep PRED resolutions
 
 *AI-007 v2.0 · Brier-Optimized · Generic across all Cases/PREDs*
 
