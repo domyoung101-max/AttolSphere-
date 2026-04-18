@@ -44,6 +44,23 @@ Ed029 published with incorrect timestamp “19 April 2026 · 1954 GMT · War Day
 
 -----
 
+## AI-007 CALIBRATION LOG — Ed030 Baseline · Auto-Generated
+
+|Bin    |Pred Freq|Obs Freq|Obs Rate|Adjustment|
+|-------|---------|--------|--------|----------|
+|20-30% |1        |0       |0.00    |-4%       |
+|Brier: 0.190 | Global Shrink: 0% | Resolutions: 5 | Next Update: Ed031 PREDs|
+
+**Rules**:
+- Input: Calibration Map mids + PRED resolutions (CONFIRMED=1, CONTRADICTED=0).
+- Bands: 0-10/10-20/...70+%.
+- Apply: Raw prob × (1 + adjustment).
+- Ed031: Append GL U/Lebanon → re-compute.
+
+*AI-007 v2.0 · Brier-Optimized · Generic across all Cases/PREDs*
+
+-----
+
 ## CRITICAL WINDOWS
 
 |Window                                  |Status                         |Action                                                                        |
