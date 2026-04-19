@@ -17,7 +17,7 @@
 ## CURRENT EDITION
 
 - Last completed: Edition 028 · Late Afternoon Sweep · 18 April 2026 · 1611 GMT (1711 BST)
-- Next: Edition 029 · Must run at or before Lebanon 72-hr window close (2200 GMT 19 April) — MANDATORY — or earlier if: second round formally announced, Hezbollah barrage or IDF large-scale strike in Lebanon, IRGC kinetic engagement with USN, IRGC follow-on Yanbu/Petroline strike, SNSC formally reverses Araghchi Hormuz opening, Hormuz AIS confirms sustained transit (PRED-027-B/028-B resolution), Trump Lebanon prohibition reversed after Netanyahu pressure
+- Next: Edition 029 · Must run after Lebanon 72-hr window close (2200 GMT 19 April) — MANDATORY — or earlier if: second round formally announced, Hezbollah barrage or IDF large-scale strike in Lebanon, IRGC kinetic engagement with USN, IRGC follow-on Yanbu/Petroline strike, SNSC formally reverses Araghchi Hormuz opening, Hormuz AIS confirms sustained transit (PRED-027-B/028-B resolution), Trump Lebanon prohibition reversed after Netanyahu pressure
 - Current time at session state update: 1611 GMT 18 April 2026
 - Lebanon 72-hr window expiry: 2200 GMT 19 April 2026 — **T-28 HOURS from state update**
 - Ceasefire expiry: ~0000 GMT 22 April 2026 — **T-4 DAYS**
