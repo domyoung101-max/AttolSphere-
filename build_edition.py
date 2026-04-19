@@ -35,14 +35,14 @@ make_page_callbacks,
 
 # ── EDITION CONSTANTS ─────────────────────────────────────────────────────────
 
-EDITION   = “022”
-DATE_STR  = “14 APRIL 2026”
-SWEEP_STR = “EVENING SWEEP”
+EDITION   = "029"
+DATE_STR  = "19 APRIL 2026"
+SWEEP_STR = "AFTERNOON SWEEP"
 
-GMT_NOW = datetime.datetime(2026, 4, 14, 23, 34, 0)
+GMT_NOW = datetime.datetime(2026, 4, 19, 14, 53, 0)
 BST_NOW = GMT_NOW + datetime.timedelta(hours=1)
-GMT_STR = GMT_NOW.strftime(”%d %B %Y · %H:%M GMT”)
-BST_STR = BST_NOW.strftime(”%H:%M BST”)
+GMT_STR = GMT_NOW.strftime("%d %B %Y · %H:%M GMT")
+BST_STR = BST_NOW.strftime("%H:%M BST")
 
 # ── BUILD ─────────────────────────────────────────────────────────────────────
 
@@ -860,5 +860,5 @@ doc.build(story, onFirstPage=on_cover, onLaterPages=on_page)
 print(f'Built: {path}')
 ```
 
-if **name** == ‘**main**’:
-build()
+if __name__ == "__main__":
+    build()
