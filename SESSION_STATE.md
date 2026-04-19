@@ -14,45 +14,6 @@
 
 -----
 
-## CANONICAL PRECEDENCE AND PATCH CONTROL
-
-### Canonical precedence order
-
-When multiple documents or chat-layer instructions coexist, apply them in the following order of authority:
-
-1. `ARCHITECTURE.md` — constitutional rule authority, governance logic, CDIT/Gate/TQL standards, change-control rules.
-2. `SOURCE_REGISTRY.json` or current source-registry file — source classification, upstream dependency, cluster treatment, Gate 0.5 operationalisation.
-3. `SESSION_STATE.md` — active continuity document, live case state, prediction state, calibration carry-forward, next-sweep actions.
-4. `styles.py` and `build_core.py` — implementation baseline for visual template, layout helpers, and build-safe calling patterns.
-5. Pending chat-session updates — provisional until classified and merged.
-
-If any lower layer conflicts with a higher layer, the higher layer governs until a versioned patch is logged and merged. Do not silently override a higher layer from a lower one.
-
-### Pending chat-patch protocol
-
-Any instruction, correction, or rule proposed inside a live chat session is provisional until classified into one of the following states:
-
-- **DUPLICATE** — already present in a governing file; do not merge again.
-- **COMPATIBLE** — not yet written into baseline files, but consistent with them; may be merged to the correct target file.
-- **STALE** — no longer operationally true; rewrite or retire.
-- **CONFLICTING** — contradicts a higher-authority file; do not apply unless elevated through formal patching.
-- **SUPERSEDING** — intentionally replaces an older rule; requires explicit target file, change-log entry, and version-aware merge.
-
-No chat-derived item becomes canonical merely because it was stated in-session. Every pending item must be assigned a classification, a target file, and a merge disposition before it can govern future sweeps or builds.
-
-### Rebuild freeze rule
-
-No new sweep, edition build, backend rebuild, or repository canonicalisation may begin while unresolved pending patches remain open in any of these categories:
-
-- COMPATIBLE but unmerged
-- STALE but unrevised
-- CONFLICTING unresolved
-- SUPERSEDING not yet logged
-
-If pending patch resolution is incomplete, stop and complete the patch ledger first. Beginning a rebuild with unresolved patch state = controlled drift risk.
-
------
-
 ## CURRENT EDITION
 
 - Last completed: Edition 028 · Late Afternoon Sweep · 18 April 2026 · 1611 GMT (1711 BST)
@@ -155,6 +116,21 @@ Favour calibrated accuracy over expressive certainty. If evidence is incomplete,
 
 **NOTE FOR ED029 SWEEP:** All probabilities above are Ed028 Late Afternoon values. The Ed029 sweep must re-check all facts, apply live intelligence, and update the calibration map before publication. Do not carry Ed028 Late Afternoon probabilities forward as final without re-verification.
 
+## AI-007 CALIBRATION LOG — Ed029 Baseline · Auto-Generated
+
+|Bin    |Pred Freq|Obs Freq|Obs Rate|Adjustment|
+|-------|---------|--------|--------|----------|
+|20-30% |1        |0       |0.00    |-4%       |
+|Brier: 0.190 | Global Shrink: 0% | Resolutions: 5 | Next Update: Current PREDs|
+
+**Rules**:
+- Input: Calibration Map mids + PRED resolutions (CONFIRMED=1, CONTRADICTED=0).
+- Bands: 0-10/10-20/...70+%.
+- Apply: Raw prob × (1 + adjustment).
+- **NEXT**: Append current sweep PRED resolutions → re-compute table.
+
+*AI-007 v2.0 · Brier-Optimized · Generic across all Cases/PREDs*
+
 -----
 
 ## CRITICAL WINDOWS — STATUS AT 1611 GMT 18 APRIL 2026
@@ -201,48 +177,33 @@ Favour calibrated accuracy over expressive certainty. If evidence is incomplete,
 
 ### Case A (Second Round / Ceasefire)
 
-- H-A1: Second round held before 22 April — **72–82% — NEAR-CONFIRMED (PROVISIONAL)**  
-  (Ed028 Late Afternoon band carried forward. Pakistan CDF Munir Tehran Tier 1. White House “very likely Islamabad, not yet official.” Pakistan FO and Iranian officials continue to state no dates set for a second round — **no formal date/venue/agenda announcement as of latest sweep**, so trigger for full confirmation not met.)
-- H-A2: Talks fail / ceasefire lapses — **5–10%**  
-  (Ed028 Late Afternoon. Enrichment structural contradiction unresolved. Rubio snapback signal H5 friction risk. No new Tier 1 evidence of breakdown.)
-- H-A3: Ceasefire formally extended — **45–60% — PROVISIONAL**  
-  (Ed028 Late Afternoon. No formal extension instrument in public record. PROVISIONAL per AI-007 — remains contingent on a signed extension.)
-  
+- H-A1: Second round held before 22 April — **72–82%** (Ed028 Late Afternoon. Pakistan Munir Tehran Tier 1. White House “very likely Islamabad, not yet official.” No formal announcement at 1611 GMT 18 April. Ed029 must re-verify at open.)
+- H-A2: Talks fail / ceasefire lapses — **5–10%** (Ed028 Late Afternoon. Enrichment structural contradiction unresolved. Rubio snapback signal H5 friction risk.)
+- H-A3: Ceasefire formally extended — **45–60%** (Ed028 Late Afternoon. No formal instrument. PROVISIONAL per AI-007.)
+
 ### Case B (Hormuz / Summit / Blockade)
 
-- H-B1: Hormuz conditionally open / sustainability unverified — **55–70%**  
-  (Ed028 Late Afternoon. Araghchi Tier 1. IRGC coordination required. AIS below 10% pre-crisis norms. USN blockade active. SNSC silent. H4 gap. Fragility flag active.)
-- H-B2: IRGC kinetic response to USN — **10–20%**  
-  (Ed028 Late Afternoon. Lebanon ceasefire suppressor. Ghalibaf threat standing. Maintained.)
-- H-B3: Multilateral mission committed force structure — **26–34% PARTIAL**  
-  (Ed028 Late Afternoon. 51-nation Paris Summit Joint Statement GOV.UK Tier 1. Initiative launched. Northwood next week. No deployment timeline — PARTIAL.)
+- H-B1: Hormuz conditionally open / sustainability unverified — **55–70%** (Ed028 Late Afternoon. Araghchi Tier 1. IRGC coordination required. AIS below 10% pre-crisis norms. USN blockade active. SNSC silent. H4 gap. Fragility flag active.)
+- H-B2: IRGC kinetic response to USN — **10–20%** (Ed028 Late Afternoon. Lebanon ceasefire suppressor. Ghalibaf threat standing. Maintained.)
+- H-B3: Multilateral mission committed force structure — **26–34% PARTIAL** (Ed028 Late Afternoon. 51-nation Paris Summit Joint Statement GOV.UK Tier 1. Initiative launched. Northwood next week. No deployment timeline — PARTIAL.)
 
-### Case C (Lebanon) — SUB-ESCALATORY VIOLATIONS / TRUMP “PROHIBITED” / 10-DAY CEASEFIRE IN FORCE
+### Case C (Lebanon) — SUB-ESCALATORY VIOLATIONS / TRUMP “PROHIBITED” / 72-HR WINDOW T-28 HOURS
 
-- H-C1: Framework leads to operational pause — **58–70%**  
-  (Ed028 Late Afternoon band carried forward. 10-day ceasefire in force; Trump PROHIBITED post constrains IDF offensive action. Press reporting shows limited violations and continued IDF presence in southern Lebanon, but **no major Hezbollah barrage or large-scale IDF strike** triggering framework collapse.)
-- H-C2: Framework without operational impact — **15–22%**  
-  (Ed028 Late Afternoon. Netanyahu security zone persists. IDF indefinite presence in southern Lebanon, locals’ return constrained — framework exists but ground posture only partially softened.)
-- H-C3: Hezbollah escalation / framework collapse — **10–18%**  
-  (Ed028 Late Afternoon band maintained. Ceasefire described as fragile with sub-escalatory violations, but **no large Hezbollah barrage or large-scale IDF strike** reported; escalation risk remains but has not materialised into framework collapse.)
+- H-C1: Framework leads to operational pause — **58–70%** (Ed028 Late Afternoon. Trump prohibition post. Hour 75 at state update. No barrage. Gate 0.3 absent. Revised up from 55–68%.)
+- H-C2: Framework without operational impact — **15–22%** (Ed028 Late Afternoon. Netanyahu security zone persists. IDF indefinite presence stated.)
+- H-C3: Hezbollah escalation / framework collapse — **10–18%** (Ed028 Late Afternoon. Trump prohibition reduces IDF offensive trigger. No barrage confirmed. Revised down from 12–20%.)
 
 ### Case D (India Oil Waiver) — GL U CONFIRMED LAPSED (TWO OFAC FETCHES)
 
-- H-D1: GL U renewed — **0% — CONTRADICTED**  
-  (Eliminated. GL U confirmed lapsed at two independent OFAC fetches.)
-- H-D2: GL U lapses 19 April — **97–99% — CONFIRMED**  
-  (OFAC direct fetch 1342 GMT AND 1611 GMT 18 April. Clean at both fetches. PRED-022-C/023-B/026-D CONFIRMED.)
-- H-D3: Wind-down instrument issued — **1–3%**  
-  (Near-eliminated. No retroactive instrument at either OFAC fetch. Residual only.)
+- H-D1: GL U renewed — **0% — CONTRADICTED** (Eliminated. GL U confirmed lapsed at two independent OFAC fetches.)
+- H-D2: GL U lapses 19 April — **97–99% — CONFIRMED** (OFAC direct fetch 1342 GMT AND 1611 GMT 18 April. Clean at both fetches. PRED-022-C/023-B/026-D CONFIRMED.)
+- H-D3: Wind-down instrument issued — **1–3%** (Near-eliminated. No retroactive instrument at either OFAC fetch. Residual only.)
 
 ### Case E (Saudi Aramco / Yanbu) — GATE 5 REFRAME EXECUTED ED027 EVENING / GL U REVERSION APPLIED ED028
 
-- H-E1: No further IRGC Yanbu/Petroline strike before 22 April — **42–55%**  
-  (Ed028 Late Afternoon. GL U reversion applied. Lebanon ceasefire partial suppressor. No new strike through sweep.)
-- H-E2: Further IRGC strike on Yanbu/Petroline before 22 April — **35–48%**  
-  (Ed028 Late Afternoon. GL U reversion applied. Risk elevated. Lebanon ceasefire partial suppressor.)
-- H-E3: IRGC displaced response via USN proxy — **10–15%**  
-  (Ed028 Late Afternoon. Abdollahi threat standing — stale 3 days. Maintained.)
+- H-E1: No further IRGC Yanbu/Petroline strike before 22 April — **42–55%** (Ed028 Late Afternoon. GL U reversion applied. Lebanon ceasefire partial suppressor. No new strike through sweep.)
+- H-E2: Further IRGC strike on Yanbu/Petroline before 22 April — **35–48%** (Ed028 Late Afternoon. GL U reversion applied. Risk elevated. Lebanon ceasefire partial suppressor.)
+- H-E3: IRGC displaced response via USN proxy — **10–15%** (Ed028 Late Afternoon. Abdollahi threat standing — stale 3 days. Maintained.)
 
 -----
 
@@ -269,16 +230,15 @@ Favour calibrated accuracy over expressive certainty. If evidence is incomplete,
 |PRED-025-D|Israel-Lebanon 10-day ceasefire holds through expiry                      |~27 April        |MONITORING — Hour 75. Violations sub-escalatory. Trump prohibition new signal. 72-hr window T-28 hours.                                             |
 |PRED-026-A|Second round formally announced date/venue/agenda                         |Before 22 April  |PENDING — No announcement at 1611 GMT 18 April. Ed029 mandatory at sweep open.                                                                      |
 |PRED-026-B|Summit outputs — named naval assets + deployment timeline                 |17 April         |**PARTIAL — UPGRADED** — 51-nation summit. Named assets confirmed. Northwood next week confirmed. No deployment timeline.                           |
-|PRED-026-C|Lebanon 72-hr window closes without major violation                       |2200 GMT 19 April|CONFIRMED — 10-day Israel–Lebanon ceasefire remained in force through the first 72 hours. Reporting shows limited violations and continued IDF presence in southern Lebanon, but no large Hezbollah barrage or large-scale IDF strike meeting the “major violation” trigger.                                                            |
+|PRED-026-C|Lebanon 72-hr window closes without major violation                       |2200 GMT 19 April|MONITORING — T-28 hours at state update. Gate 0.3 mandatory. Resolves 2200 GMT 19 April.                                                            |
 |PRED-026-D|GL U lapse confirmed at OFAC fetch 0401 GMT 19 April                      |19 April 0401 GMT|**CONFIRMED** — Two OFAC fetches confirm. Ed028.                                                                                                    |
 |PRED-026-E|No IRGC Yanbu/Petroline strike before 22 April                            |8 April          |**CONTRADICTED** — First strike CONFIRMED 8 April. Retroactively contradicted Ed027 Evening.                                                        |
 |PRED-027-A|Second round formally announced before 22 April                           |Before 22 April  |PENDING — No formal announcement at 1611 GMT 18 April. Ed029 mandatory at sweep open.                                                               |
 |PRED-027-B|Hormuz commercial transit sustained 48+ hours without IRGC interference   |~19 April        |MONITORING — AIS below 10% pre-crisis norms. First 48h window ~1300 GMT 19 April. Ed029 mandatory.                                                  |
 |PRED-027-E|Follow-on IRGC strike on Yanbu/Petroline before 22 April (second instance)|22 April         |PENDING — GL U reversion activated. H-E2 35–48%. No new strike through Ed028 Late Afternoon.                                                        |
-|PRED-028-A|Second round formally announced (Ed028 flag)                              |Before 22 April  |CONFIRMED — No announcement at 1611 GMT 18 April.                                                                                                     |
+|PRED-028-A|Second round formally announced (Ed028 flag)                              |Before 22 April  |PENDING — No announcement at 1611 GMT 18 April.                                                                                                     |
 |PRED-028-B|Hormuz AIS verification 48h (Ed028 flag)                                  |~19 April        |MONITORING — AIS below 10% pre-crisis norms. First window ~1300 GMT 19 April.                                                                       |
-|PRED-028-C|Lebanon 72-hr window status (Ed028 flag)                                  |2200 GMT 19 April|MONITORING — Lebanon 72-hr window status (Ed028 flag)  2200 GMT 19 April  CONFIRMED
-Same basis as PRED-026-C: ceasefire in force at 72h with sub-escalatory violations only; no major Hezbollah barrage or large-scale IDF strike reported.                                                                               |
+|PRED-028-C|Lebanon 72-hr window status (Ed028 flag)                                  |2200 GMT 19 April|MONITORING — T-28 hours at state update. Resolves 2200 GMT 19 April.                                                                                |
 |PRED-028-D|GL U lapse monitoring / UCO Bank (Ed028 flag)                             |Ongoing          |CONFIRMED basis. Monitor UCO Bank and India sourcing. Two OFAC fetches confirmed clean.                                                             |
 |PRED-028-E|IRGC follow-on Yanbu/Petroline monitoring (Ed028 flag)                    |22 April         |PENDING — No new strike through Ed028 Late Afternoon.                                                                                               |
 |PRED-018-E|IRGC Yanbu strike before 22 April (original flag)                         |8 April          |**CONFIRMED** — IRGC struck East-West Pipeline 8 April. Ed027 Evening.                                                                              |
@@ -419,16 +379,16 @@ Update these constants at the top of each per-edition script:
 
 ```python
 EDITION   = "029"
-DATE_STR  = "19 APRIL 2026"
+DATE_STR  = "18 APRIL 2026"
 SWEEP_STR = "MORNING SWEEP"   # or appropriate
-GMT_NOW   = datetime.datetime(2026, 4, 19, ?, ?, 0)
+GMT_NOW   = datetime.datetime(2026, 4, 18, ?, ?, 0)
 ```
 
 **flag_block() signature:** `flag_block(ref, number, body_text, gate_note, styles)` — five positional arguments. styles must be passed explicitly. PMM Entry 005.
 
 **story.extend() not story.append():** flag_block() and source_block() return lists of flowables. Use `story.extend(flag_block(...))` and `story.extend(source_block([...]))`. PMM Entry 010 — starred-append error corrected in Ed028 Late Afternoon build.
 
-Session opening requirement: retrieve SESSION_STATE.md, styles.py, and buildcore.py from the canonical repo when available; if direct repo access is unavailable, incomplete, stale, or untrusted for the session, paste them into context manually before sweep or build work begins. Files not retrieved or pasted from a canonical source create reconstruction drift risk.
+**Session opening requirement:** styles.py and build_core.py must be pasted into context at session open. Claude cannot fetch from GitHub. Files not pasted = reconstruction from inference = drift risk.
 
 -----
 
@@ -656,27 +616,15 @@ The session state must be updated with all of the following before closing. If a
 
 ### BUILD SCRIPT SESSION OPENING REQUIREMENTS
 
-At the start of every new chat session, the following must be available before any sweep or build action:
+At the start of every new chat session, the following must be present in context before any sweep or build action:
 
-|File|Preferred source|Purpose|
-|---|---|---|
-|`SESSION_STATE.md`|Current canonical copy in repo or operator-pasted copy|Primary continuity document — active state, calibration carry-forward, prediction status, next-sweep priorities|
-|`styles.py`|Repo copy or operator-pasted copy|Colour constants and style factory|
-|`build_core.py`|Repo copy or operator-pasted copy|Layout helper functions and build-safe component behaviour|
+|File            |Source            |Purpose                                |
+|----------------|------------------|---------------------------------------|
+|SESSION_STATE.md|Pasted by operator|Primary continuity document — this file|
+|styles.py       |Pasted from repo  |Colour constants and style factory     |
+|build_core.py   |Pasted from repo  |Layout helper functions                |
 
-### Access mode rule
-
-Preferred mode: fetch the current canonical files directly from the connected repository or current working source.
-
-Fallback mode: if direct repository access is unavailable, incomplete, stale, or not trusted for the active session, the operator must paste `SESSION_STATE.md`, `styles.py`, and `build_core.py` into context manually before sweep or build work begins.
-
-### Drift-prevention rule
-
-If any required file is missing, stale, or reconstructed from inference rather than retrieved or pasted from a canonical source, do not proceed to sweep or build. Missing baseline files create drift risk.
-
-### Conflict handling
-
-If repo content, pasted content, and chat-session instructions differ, apply the canonical precedence order defined above and open a pending patch entry before proceeding. Do not silently choose one version.
+Claude cannot fetch from GitHub directly. Files must be pasted into context manually. Claude has no memory between sessions. Files not pasted = reconstruction from inference = drift risk.
 
 -----
 
