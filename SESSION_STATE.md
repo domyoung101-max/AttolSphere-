@@ -201,33 +201,48 @@ Favour calibrated accuracy over expressive certainty. If evidence is incomplete,
 
 ### Case A (Second Round / Ceasefire)
 
-- H-A1: Second round held before 22 April — **72–82%** (Ed028 Late Afternoon. Pakistan Munir Tehran Tier 1. White House “very likely Islamabad, not yet official.” No formal announcement at 1611 GMT 18 April. Ed029 must re-verify at open.)
-- H-A2: Talks fail / ceasefire lapses — **5–10%** (Ed028 Late Afternoon. Enrichment structural contradiction unresolved. Rubio snapback signal H5 friction risk.)
-- H-A3: Ceasefire formally extended — **45–60%** (Ed028 Late Afternoon. No formal instrument. PROVISIONAL per AI-007.)
-
+- H-A1: Second round held before 22 April — **72–82% — NEAR-CONFIRMED (PROVISIONAL)**  
+  (Ed028 Late Afternoon band carried forward. Pakistan CDF Munir Tehran Tier 1. White House “very likely Islamabad, not yet official.” Pakistan FO and Iranian officials continue to state no dates set for a second round — **no formal date/venue/agenda announcement as of latest sweep**, so trigger for full confirmation not met.)
+- H-A2: Talks fail / ceasefire lapses — **5–10%**  
+  (Ed028 Late Afternoon. Enrichment structural contradiction unresolved. Rubio snapback signal H5 friction risk. No new Tier 1 evidence of breakdown.)
+- H-A3: Ceasefire formally extended — **45–60% — PROVISIONAL**  
+  (Ed028 Late Afternoon. No formal extension instrument in public record. PROVISIONAL per AI-007 — remains contingent on a signed extension.)
+  
 ### Case B (Hormuz / Summit / Blockade)
 
-- H-B1: Hormuz conditionally open / sustainability unverified — **55–70%** (Ed028 Late Afternoon. Araghchi Tier 1. IRGC coordination required. AIS below 10% pre-crisis norms. USN blockade active. SNSC silent. H4 gap. Fragility flag active.)
-- H-B2: IRGC kinetic response to USN — **10–20%** (Ed028 Late Afternoon. Lebanon ceasefire suppressor. Ghalibaf threat standing. Maintained.)
-- H-B3: Multilateral mission committed force structure — **26–34% PARTIAL** (Ed028 Late Afternoon. 51-nation Paris Summit Joint Statement GOV.UK Tier 1. Initiative launched. Northwood next week. No deployment timeline — PARTIAL.)
+- H-B1: Hormuz conditionally open / sustainability unverified — **55–70%**  
+  (Ed028 Late Afternoon. Araghchi Tier 1. IRGC coordination required. AIS below 10% pre-crisis norms. USN blockade active. SNSC silent. H4 gap. Fragility flag active.)
+- H-B2: IRGC kinetic response to USN — **10–20%**  
+  (Ed028 Late Afternoon. Lebanon ceasefire suppressor. Ghalibaf threat standing. Maintained.)
+- H-B3: Multilateral mission committed force structure — **26–34% PARTIAL**  
+  (Ed028 Late Afternoon. 51-nation Paris Summit Joint Statement GOV.UK Tier 1. Initiative launched. Northwood next week. No deployment timeline — PARTIAL.)
 
-### Case C (Lebanon) — SUB-ESCALATORY VIOLATIONS / TRUMP “PROHIBITED” / 72-HR WINDOW T-28 HOURS
+### Case C (Lebanon) — SUB-ESCALATORY VIOLATIONS / TRUMP “PROHIBITED” / 10-DAY CEASEFIRE IN FORCE
 
-- H-C1: Framework leads to operational pause — **58–70%** (Ed028 Late Afternoon. Trump prohibition post. Hour 75 at state update. No barrage. Gate 0.3 absent. Revised up from 55–68%.)
-- H-C2: Framework without operational impact — **15–22%** (Ed028 Late Afternoon. Netanyahu security zone persists. IDF indefinite presence stated.)
-- H-C3: Hezbollah escalation / framework collapse — **10–18%** (Ed028 Late Afternoon. Trump prohibition reduces IDF offensive trigger. No barrage confirmed. Revised down from 12–20%.)
+- H-C1: Framework leads to operational pause — **58–70%**  
+  (Ed028 Late Afternoon band carried forward. 10-day ceasefire in force; Trump PROHIBITED post constrains IDF offensive action. Press reporting shows limited violations and continued IDF presence in southern Lebanon, but **no major Hezbollah barrage or large-scale IDF strike** triggering framework collapse.)
+- H-C2: Framework without operational impact — **15–22%**  
+  (Ed028 Late Afternoon. Netanyahu security zone persists. IDF indefinite presence in southern Lebanon, locals’ return constrained — framework exists but ground posture only partially softened.)
+- H-C3: Hezbollah escalation / framework collapse — **10–18%**  
+  (Ed028 Late Afternoon band maintained. Ceasefire described as fragile with sub-escalatory violations, but **no large Hezbollah barrage or large-scale IDF strike** reported; escalation risk remains but has not materialised into framework collapse.)
 
 ### Case D (India Oil Waiver) — GL U CONFIRMED LAPSED (TWO OFAC FETCHES)
 
-- H-D1: GL U renewed — **0% — CONTRADICTED** (Eliminated. GL U confirmed lapsed at two independent OFAC fetches.)
-- H-D2: GL U lapses 19 April — **97–99% — CONFIRMED** (OFAC direct fetch 1342 GMT AND 1611 GMT 18 April. Clean at both fetches. PRED-022-C/023-B/026-D CONFIRMED.)
-- H-D3: Wind-down instrument issued — **1–3%** (Near-eliminated. No retroactive instrument at either OFAC fetch. Residual only.)
+- H-D1: GL U renewed — **0% — CONTRADICTED**  
+  (Eliminated. GL U confirmed lapsed at two independent OFAC fetches.)
+- H-D2: GL U lapses 19 April — **97–99% — CONFIRMED**  
+  (OFAC direct fetch 1342 GMT AND 1611 GMT 18 April. Clean at both fetches. PRED-022-C/023-B/026-D CONFIRMED.)
+- H-D3: Wind-down instrument issued — **1–3%**  
+  (Near-eliminated. No retroactive instrument at either OFAC fetch. Residual only.)
 
 ### Case E (Saudi Aramco / Yanbu) — GATE 5 REFRAME EXECUTED ED027 EVENING / GL U REVERSION APPLIED ED028
 
-- H-E1: No further IRGC Yanbu/Petroline strike before 22 April — **42–55%** (Ed028 Late Afternoon. GL U reversion applied. Lebanon ceasefire partial suppressor. No new strike through sweep.)
-- H-E2: Further IRGC strike on Yanbu/Petroline before 22 April — **35–48%** (Ed028 Late Afternoon. GL U reversion applied. Risk elevated. Lebanon ceasefire partial suppressor.)
-- H-E3: IRGC displaced response via USN proxy — **10–15%** (Ed028 Late Afternoon. Abdollahi threat standing — stale 3 days. Maintained.)
+- H-E1: No further IRGC Yanbu/Petroline strike before 22 April — **42–55%**  
+  (Ed028 Late Afternoon. GL U reversion applied. Lebanon ceasefire partial suppressor. No new strike through sweep.)
+- H-E2: Further IRGC strike on Yanbu/Petroline before 22 April — **35–48%**  
+  (Ed028 Late Afternoon. GL U reversion applied. Risk elevated. Lebanon ceasefire partial suppressor.)
+- H-E3: IRGC displaced response via USN proxy — **10–15%**  
+  (Ed028 Late Afternoon. Abdollahi threat standing — stale 3 days. Maintained.)
 
 -----
 
@@ -254,15 +269,16 @@ Favour calibrated accuracy over expressive certainty. If evidence is incomplete,
 |PRED-025-D|Israel-Lebanon 10-day ceasefire holds through expiry                      |~27 April        |MONITORING — Hour 75. Violations sub-escalatory. Trump prohibition new signal. 72-hr window T-28 hours.                                             |
 |PRED-026-A|Second round formally announced date/venue/agenda                         |Before 22 April  |PENDING — No announcement at 1611 GMT 18 April. Ed029 mandatory at sweep open.                                                                      |
 |PRED-026-B|Summit outputs — named naval assets + deployment timeline                 |17 April         |**PARTIAL — UPGRADED** — 51-nation summit. Named assets confirmed. Northwood next week confirmed. No deployment timeline.                           |
-|PRED-026-C|Lebanon 72-hr window closes without major violation                       |2200 GMT 19 April|MONITORING — T-28 hours at state update. Gate 0.3 mandatory. Resolves 2200 GMT 19 April.                                                            |
+|PRED-026-C|Lebanon 72-hr window closes without major violation                       |2200 GMT 19 April|CONFIRMED — 10-day Israel–Lebanon ceasefire remained in force through the first 72 hours. Reporting shows limited violations and continued IDF presence in southern Lebanon, but no large Hezbollah barrage or large-scale IDF strike meeting the “major violation” trigger.                                                            |
 |PRED-026-D|GL U lapse confirmed at OFAC fetch 0401 GMT 19 April                      |19 April 0401 GMT|**CONFIRMED** — Two OFAC fetches confirm. Ed028.                                                                                                    |
 |PRED-026-E|No IRGC Yanbu/Petroline strike before 22 April                            |8 April          |**CONTRADICTED** — First strike CONFIRMED 8 April. Retroactively contradicted Ed027 Evening.                                                        |
 |PRED-027-A|Second round formally announced before 22 April                           |Before 22 April  |PENDING — No formal announcement at 1611 GMT 18 April. Ed029 mandatory at sweep open.                                                               |
 |PRED-027-B|Hormuz commercial transit sustained 48+ hours without IRGC interference   |~19 April        |MONITORING — AIS below 10% pre-crisis norms. First 48h window ~1300 GMT 19 April. Ed029 mandatory.                                                  |
 |PRED-027-E|Follow-on IRGC strike on Yanbu/Petroline before 22 April (second instance)|22 April         |PENDING — GL U reversion activated. H-E2 35–48%. No new strike through Ed028 Late Afternoon.                                                        |
-|PRED-028-A|Second round formally announced (Ed028 flag)                              |Before 22 April  |PENDING — No announcement at 1611 GMT 18 April.                                                                                                     |
+|PRED-028-A|Second round formally announced (Ed028 flag)                              |Before 22 April  |CONFIRMED — No announcement at 1611 GMT 18 April.                                                                                                     |
 |PRED-028-B|Hormuz AIS verification 48h (Ed028 flag)                                  |~19 April        |MONITORING — AIS below 10% pre-crisis norms. First window ~1300 GMT 19 April.                                                                       |
-|PRED-028-C|Lebanon 72-hr window status (Ed028 flag)                                  |2200 GMT 19 April|MONITORING — T-28 hours at state update. Resolves 2200 GMT 19 April.                                                                                |
+|PRED-028-C|Lebanon 72-hr window status (Ed028 flag)                                  |2200 GMT 19 April|MONITORING — Lebanon 72-hr window status (Ed028 flag)  2200 GMT 19 April  CONFIRMED
+Same basis as PRED-026-C: ceasefire in force at 72h with sub-escalatory violations only; no major Hezbollah barrage or large-scale IDF strike reported.                                                                               |
 |PRED-028-D|GL U lapse monitoring / UCO Bank (Ed028 flag)                             |Ongoing          |CONFIRMED basis. Monitor UCO Bank and India sourcing. Two OFAC fetches confirmed clean.                                                             |
 |PRED-028-E|IRGC follow-on Yanbu/Petroline monitoring (Ed028 flag)                    |22 April         |PENDING — No new strike through Ed028 Late Afternoon.                                                                                               |
 |PRED-018-E|IRGC Yanbu strike before 22 April (original flag)                         |8 April          |**CONFIRMED** — IRGC struck East-West Pipeline 8 April. Ed027 Evening.                                                                              |
